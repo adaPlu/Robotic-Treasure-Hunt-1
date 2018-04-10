@@ -881,19 +881,6 @@ nav_msgs_generate_messages_nodejs/fast:
 .PHONY : nav_msgs_generate_messages_nodejs/fast
 
 #=============================================================================
-# Target rules for targets named treasurelocator
-
-# Build rule for target.
-treasurelocator: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 treasurelocator
-.PHONY : treasurelocator
-
-# fast build rule for target.
-treasurelocator/fast:
-	$(MAKE) -f labpkg/CMakeFiles/treasurelocator.dir/build.make labpkg/CMakeFiles/treasurelocator.dir/build
-.PHONY : treasurelocator/fast
-
-#=============================================================================
 # Target rules for targets named actionlib_generate_messages_py
 
 # Build rule for target.
@@ -2625,7 +2612,6 @@ help:
 	@echo "... nav_msgs_generate_messages_lisp"
 	@echo "... tf2_msgs_generate_messages_eus"
 	@echo "... nav_msgs_generate_messages_nodejs"
-	@echo "... treasurelocator"
 	@echo "... actionlib_generate_messages_py"
 	@echo "... nav_msgs_generate_messages_py"
 	@echo "... actionlib_msgs_generate_messages_lisp"

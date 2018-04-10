@@ -5,7 +5,6 @@
 # it emulates the modifications of the setup script without recurring computations
 
 # new environment variables
-export ROSLISP_PACKAGE_DIRECTORIES="/home/adam/wsfinal/devel/share/common-lisp"
 
 # modified environment variables
 export PWD="/home/adam/wsfinal/build"

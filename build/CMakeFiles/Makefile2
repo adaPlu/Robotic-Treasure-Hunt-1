@@ -1075,7 +1075,6 @@ clean: husky-kinetic-devel/husky_msgs/CMakeFiles/husky_msgs_generate_messages_py
 
 # Convenience name for "all" pass in the directory.
 labpkg/all: labpkg/CMakeFiles/moveMap.dir/all
-labpkg/all: labpkg/CMakeFiles/treasurelocator.dir/all
 labpkg/all: labpkg/CMakeFiles/gotopose.dir/all
 
 .PHONY : labpkg/all
@@ -1109,7 +1108,6 @@ labpkg/clean: labpkg/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/clean
 labpkg/clean: labpkg/CMakeFiles/nav_msgs_generate_messages_lisp.dir/clean
 labpkg/clean: labpkg/CMakeFiles/tf2_msgs_generate_messages_eus.dir/clean
 labpkg/clean: labpkg/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/clean
-labpkg/clean: labpkg/CMakeFiles/treasurelocator.dir/clean
 labpkg/clean: labpkg/CMakeFiles/actionlib_generate_messages_py.dir/clean
 labpkg/clean: labpkg/CMakeFiles/nav_msgs_generate_messages_py.dir/clean
 labpkg/clean: labpkg/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/clean
@@ -2035,43 +2033,6 @@ labpkg/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/clean:
 
 # clean rule for target.
 clean: labpkg/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target labpkg/CMakeFiles/treasurelocator.dir
-
-# All Build rule for target.
-labpkg/CMakeFiles/treasurelocator.dir/all:
-	$(MAKE) -f labpkg/CMakeFiles/treasurelocator.dir/build.make labpkg/CMakeFiles/treasurelocator.dir/depend
-	$(MAKE) -f labpkg/CMakeFiles/treasurelocator.dir/build.make labpkg/CMakeFiles/treasurelocator.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/adam/wsfinal/build/CMakeFiles --progress-num=47,48 "Built target treasurelocator"
-.PHONY : labpkg/CMakeFiles/treasurelocator.dir/all
-
-# Include target in all.
-all: labpkg/CMakeFiles/treasurelocator.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-labpkg/CMakeFiles/treasurelocator.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/adam/wsfinal/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 labpkg/CMakeFiles/treasurelocator.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/adam/wsfinal/build/CMakeFiles 0
-.PHONY : labpkg/CMakeFiles/treasurelocator.dir/rule
-
-# Convenience name for target.
-treasurelocator: labpkg/CMakeFiles/treasurelocator.dir/rule
-
-.PHONY : treasurelocator
-
-# clean rule for target.
-labpkg/CMakeFiles/treasurelocator.dir/clean:
-	$(MAKE) -f labpkg/CMakeFiles/treasurelocator.dir/build.make labpkg/CMakeFiles/treasurelocator.dir/clean
-.PHONY : labpkg/CMakeFiles/treasurelocator.dir/clean
-
-# clean rule for target.
-clean: labpkg/CMakeFiles/treasurelocator.dir/clean
 
 .PHONY : clean
 

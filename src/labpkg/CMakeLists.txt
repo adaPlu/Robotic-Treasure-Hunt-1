@@ -23,11 +23,11 @@ catkin_package()
 include_directories( include ${catkin_INCLUDE_DIRS} )
 
 add_executable(gotopose src/gotopose.cpp)
-add_executable(treasurelocator src/treasurelocator.cpp)
+#add_executable(treasurelocator src/treasurelocator.cpp)
 add_executable(moveMap src/moveMap.cpp)
 
 
 target_link_libraries(moveMap ${catkin_LIBRARIES} )
-target_link_libraries(treasurelocator ${catkin_LIBRARIES} )
+#target_link_libraries(treasurelocator ${catkin_LIBRARIES} )
 target_link_libraries(gotopose ${catkin_LIBRARIES} )
 

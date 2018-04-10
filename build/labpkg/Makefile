@@ -586,21 +586,6 @@ nav_msgs_generate_messages_nodejs/fast:
 .PHONY : nav_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
-labpkg/CMakeFiles/treasurelocator.dir/rule:
-	cd /home/adam/wsfinal/build && $(MAKE) -f CMakeFiles/Makefile2 labpkg/CMakeFiles/treasurelocator.dir/rule
-.PHONY : labpkg/CMakeFiles/treasurelocator.dir/rule
-
-# Convenience name for target.
-treasurelocator: labpkg/CMakeFiles/treasurelocator.dir/rule
-
-.PHONY : treasurelocator
-
-# fast build rule for target.
-treasurelocator/fast:
-	cd /home/adam/wsfinal/build && $(MAKE) -f labpkg/CMakeFiles/treasurelocator.dir/build.make labpkg/CMakeFiles/treasurelocator.dir/build
-.PHONY : treasurelocator/fast
-
-# Convenience name for target.
 labpkg/CMakeFiles/actionlib_generate_messages_py.dir/rule:
 	cd /home/adam/wsfinal/build && $(MAKE) -f CMakeFiles/Makefile2 labpkg/CMakeFiles/actionlib_generate_messages_py.dir/rule
 .PHONY : labpkg/CMakeFiles/actionlib_generate_messages_py.dir/rule
@@ -939,33 +924,6 @@ src/moveMap.cpp.s:
 	cd /home/adam/wsfinal/build && $(MAKE) -f labpkg/CMakeFiles/moveMap.dir/build.make labpkg/CMakeFiles/moveMap.dir/src/moveMap.cpp.s
 .PHONY : src/moveMap.cpp.s
 
-src/treasurelocator.o: src/treasurelocator.cpp.o
-
-.PHONY : src/treasurelocator.o
-
-# target to build an object file
-src/treasurelocator.cpp.o:
-	cd /home/adam/wsfinal/build && $(MAKE) -f labpkg/CMakeFiles/treasurelocator.dir/build.make labpkg/CMakeFiles/treasurelocator.dir/src/treasurelocator.cpp.o
-.PHONY : src/treasurelocator.cpp.o
-
-src/treasurelocator.i: src/treasurelocator.cpp.i
-
-.PHONY : src/treasurelocator.i
-
-# target to preprocess a source file
-src/treasurelocator.cpp.i:
-	cd /home/adam/wsfinal/build && $(MAKE) -f labpkg/CMakeFiles/treasurelocator.dir/build.make labpkg/CMakeFiles/treasurelocator.dir/src/treasurelocator.cpp.i
-.PHONY : src/treasurelocator.cpp.i
-
-src/treasurelocator.s: src/treasurelocator.cpp.s
-
-.PHONY : src/treasurelocator.s
-
-# target to generate assembly for a file
-src/treasurelocator.cpp.s:
-	cd /home/adam/wsfinal/build && $(MAKE) -f labpkg/CMakeFiles/treasurelocator.dir/build.make labpkg/CMakeFiles/treasurelocator.dir/src/treasurelocator.cpp.s
-.PHONY : src/treasurelocator.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -1007,7 +965,6 @@ help:
 	@echo "... nav_msgs_generate_messages_lisp"
 	@echo "... tf2_msgs_generate_messages_eus"
 	@echo "... nav_msgs_generate_messages_nodejs"
-	@echo "... treasurelocator"
 	@echo "... actionlib_generate_messages_py"
 	@echo "... nav_msgs_generate_messages_py"
 	@echo "... actionlib_msgs_generate_messages_lisp"
@@ -1033,9 +990,6 @@ help:
 	@echo "... src/moveMap.o"
 	@echo "... src/moveMap.i"
 	@echo "... src/moveMap.s"
-	@echo "... src/treasurelocator.o"
-	@echo "... src/treasurelocator.i"
-	@echo "... src/treasurelocator.s"
 .PHONY : help
 
 
