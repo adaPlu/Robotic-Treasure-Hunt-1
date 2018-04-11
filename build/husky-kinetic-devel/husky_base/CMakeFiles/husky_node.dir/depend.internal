@@ -50,8 +50,6 @@ husky-kinetic-devel/husky_base/CMakeFiles/husky_node.dir/src/horizon_legacy_wrap
  /opt/ros/kinetic/include/ros/single_subscriber_publisher.h
  /opt/ros/kinetic/include/ros/spinner.h
  /opt/ros/kinetic/include/ros/static_assert.h
- /opt/ros/kinetic/include/ros/steady_timer.h
- /opt/ros/kinetic/include/ros/steady_timer_options.h
  /opt/ros/kinetic/include/ros/subscribe_options.h
  /opt/ros/kinetic/include/ros/subscriber.h
  /opt/ros/kinetic/include/ros/subscription_callback_helper.h
@@ -80,18 +78,12 @@ husky-kinetic-devel/husky_base/CMakeFiles/husky_node.dir/src/husky_base.cpp.o
  /home/adam/wsfinal/src/husky-kinetic-devel/husky_base/include/husky_base/husky_diagnostics.h
  /home/adam/wsfinal/src/husky-kinetic-devel/husky_base/include/husky_base/husky_hardware.h
  /home/adam/wsfinal/src/husky-kinetic-devel/husky_base/src/husky_base.cpp
- /opt/ros/kinetic/include/boost_161_condition_variable.h
- /opt/ros/kinetic/include/boost_161_pthread_condition_variable.h
- /opt/ros/kinetic/include/boost_161_pthread_condition_variable_fwd.h
- /opt/ros/kinetic/include/class_loader/./multi_library_class_loader.hpp
  /opt/ros/kinetic/include/class_loader/class_loader.h
- /opt/ros/kinetic/include/class_loader/class_loader.hpp
- /opt/ros/kinetic/include/class_loader/class_loader_core.hpp
- /opt/ros/kinetic/include/class_loader/console_bridge_compatibility.hpp
- /opt/ros/kinetic/include/class_loader/exceptions.hpp
- /opt/ros/kinetic/include/class_loader/meta_object.hpp
+ /opt/ros/kinetic/include/class_loader/class_loader_core.h
+ /opt/ros/kinetic/include/class_loader/class_loader_exceptions.h
+ /opt/ros/kinetic/include/class_loader/class_loader_register_macro.h
+ /opt/ros/kinetic/include/class_loader/meta_object.h
  /opt/ros/kinetic/include/class_loader/multi_library_class_loader.h
- /opt/ros/kinetic/include/class_loader/register_macro.hpp
  /opt/ros/kinetic/include/controller_interface/controller_base.h
  /opt/ros/kinetic/include/controller_manager/controller_loader_interface.h
  /opt/ros/kinetic/include/controller_manager/controller_manager.h
@@ -131,12 +123,11 @@ husky-kinetic-devel/husky_base/CMakeFiles/husky_node.dir/src/husky_base.cpp.o
  /opt/ros/kinetic/include/hardware_interface/joint_command_interface.h
  /opt/ros/kinetic/include/hardware_interface/joint_state_interface.h
  /opt/ros/kinetic/include/hardware_interface/robot_hw.h
- /opt/ros/kinetic/include/pluginlib/././class_loader_imp.hpp
- /opt/ros/kinetic/include/pluginlib/./class_loader.hpp
- /opt/ros/kinetic/include/pluginlib/class_desc.hpp
+ /opt/ros/kinetic/include/pluginlib/class_desc.h
  /opt/ros/kinetic/include/pluginlib/class_loader.h
- /opt/ros/kinetic/include/pluginlib/class_loader_base.hpp
- /opt/ros/kinetic/include/pluginlib/exceptions.hpp
+ /opt/ros/kinetic/include/pluginlib/class_loader_base.h
+ /opt/ros/kinetic/include/pluginlib/class_loader_imp.h
+ /opt/ros/kinetic/include/pluginlib/pluginlib_exceptions.h
  /opt/ros/kinetic/include/realtime_tools/realtime_publisher.h
  /opt/ros/kinetic/include/ros/advertise_options.h
  /opt/ros/kinetic/include/ros/advertise_service_options.h
@@ -182,8 +173,6 @@ husky-kinetic-devel/husky_base/CMakeFiles/husky_node.dir/src/husky_base.cpp.o
  /opt/ros/kinetic/include/ros/single_subscriber_publisher.h
  /opt/ros/kinetic/include/ros/spinner.h
  /opt/ros/kinetic/include/ros/static_assert.h
- /opt/ros/kinetic/include/ros/steady_timer.h
- /opt/ros/kinetic/include/ros/steady_timer_options.h
  /opt/ros/kinetic/include/ros/subscribe_options.h
  /opt/ros/kinetic/include/ros/subscriber.h
  /opt/ros/kinetic/include/ros/subscription_callback_helper.h
@@ -259,8 +248,6 @@ husky-kinetic-devel/husky_base/CMakeFiles/husky_node.dir/src/husky_diagnostics.c
  /opt/ros/kinetic/include/ros/single_subscriber_publisher.h
  /opt/ros/kinetic/include/ros/spinner.h
  /opt/ros/kinetic/include/ros/static_assert.h
- /opt/ros/kinetic/include/ros/steady_timer.h
- /opt/ros/kinetic/include/ros/steady_timer_options.h
  /opt/ros/kinetic/include/ros/subscribe_options.h
  /opt/ros/kinetic/include/ros/subscriber.h
  /opt/ros/kinetic/include/ros/subscription_callback_helper.h
@@ -346,8 +333,6 @@ husky-kinetic-devel/husky_base/CMakeFiles/husky_node.dir/src/husky_hardware.cpp.
  /opt/ros/kinetic/include/ros/single_subscriber_publisher.h
  /opt/ros/kinetic/include/ros/spinner.h
  /opt/ros/kinetic/include/ros/static_assert.h
- /opt/ros/kinetic/include/ros/steady_timer.h
- /opt/ros/kinetic/include/ros/steady_timer_options.h
  /opt/ros/kinetic/include/ros/subscribe_options.h
  /opt/ros/kinetic/include/ros/subscriber.h
  /opt/ros/kinetic/include/ros/subscription_callback_helper.h

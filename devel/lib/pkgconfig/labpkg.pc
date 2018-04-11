@@ -1,8 +1,0 @@
-prefix=/home/adam/wsfinal/devel
-
-Name: labpkg
-Description: Description of labpkg
-Version: 0.0.1
-Cflags: 
-Libs: -L/home/adam/wsfinal/devel/lib 
-Requires: 

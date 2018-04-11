@@ -135,7 +135,7 @@ include_directories(
 ## Declare a C++ executable
 # add_executable(scavenger_hunt_node src/scavenger_hunt_node.cpp)
 add_executable(treasurelocator src/treasurelocator.cpp)
-add_executable(gotopose src/moveMap.cpp)
+add_executable(moveMap src/moveMap.cpp)
 add_executable(gotopose src/gotopose.cpp)
 add_executable(getpose src/getpose.cpp)
 ## Add cmake target dependencies of the executable
