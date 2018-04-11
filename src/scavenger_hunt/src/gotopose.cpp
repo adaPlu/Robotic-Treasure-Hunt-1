@@ -98,11 +98,11 @@ int main(int argc,char **argv) {
     
     while (ros::ok() ) {
 	ROS_INFO_STREAM("Waiting for new taget pose...");
-	while (getnewpose == true && ros::ok() )  
+	while (getnewpose == true )  
 	    ros::spinOnce();
 	ROS_INFO_STREAM("Moving towards target pose.");
 	arrived = false;
-	while ( not arrived && ros::ok()  ) { //adding ros::ok to while loops makes is stopable by ctrl-c otherwise it wont see your ctrl-c
+	while ( not arrived ) {
 	    // get current pose
 	    try {
 		lastpose = tfbuffer.lookupTransform("odom","base_link",ros::Time(0));

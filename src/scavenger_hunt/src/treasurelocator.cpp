@@ -1,4 +1,3 @@
-
 #include <ros/ros.h>
 #include <logical_camera_plugin/logicalImage.h>
 #include <geometry_msgs/PoseWithCovarianceStamped.h>
@@ -9,6 +8,8 @@
 #include <tf2_ros/transform_listener.h>
 #include <geometry_msgs/TransformStamped.h>
 #include <tf2/utils.h>
+
+#include <nav_msgs/OccupancyGrid.h>
 
 std::vector<std::string> treasureNames;
 
@@ -32,7 +33,6 @@ void Location(const geometry_msgs::PoseWithCovarianceStamped &msg){
 
 	ROS_INFO_STREAM("Robot pose " << msg.pose.pose.position);
 	ROS_INFO_STREAM("Robot rotation " << msg.pose.pose.orientation);
-//	ROS_INFO_STREAM("Robot location " << pose);
 }
 
 void LogicalCameraMessage(const logical_camera_plugin::logicalImage &msg){
@@ -88,20 +88,22 @@ ros::Subscriber logcamera = nh.subscribe("/objectsDetected",1000, &LogicalCamera
 
 ros::Subscriber robotlocation = nh.subscribe("/amcl_pose", 1000, &Location);
 
-ros::spin();
-/*
 tf2_ros::Buffer tfbuffer;
 tf2_ros::TransformListener listener(tfbuffer);
+
 while(ros::ok()){
+
 try{
-	pose = tfbuffer.lookupTransform("mapfinal", "base_link", ros::Time(0));
+	pose = tfbuffer.lookupTransform("odom", "base_link", ros::Time::now());
 }
+
 catch(tf2::TransformException &ex){
 	ROS_WARN("%s", ex.what());
 }
+//	ROS_INFO_STREAM("Robot location " << pose);
+
 ros::spinOnce();
 }
-*/
 
 }
 
