@@ -1,0 +1,8 @@
+prefix=/home/adam/wsfinal/install
+
+Name: scavenger_hunt
+Description: Description of scavenger_hunt
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/adam/wsfinal/install/lib 
+Requires: 

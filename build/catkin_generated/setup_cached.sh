@@ -8,3 +8,4 @@
 
 # modified environment variables
 export PWD="/home/adam/wsfinal/build"
+export ROS_PACKAGE_PATH="/home/adam/wsfinal/src:/home/adam/Downloads/wsfinal/src:/opt/ros/kinetic/share"
