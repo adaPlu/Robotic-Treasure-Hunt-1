@@ -22,7 +22,7 @@ i.e., your code will be tested on a map different from the one you are given for
 Logical Camera
 •Posts info on /objectsDetected
 •publishes messages of type message of type logical_camera_plugin/logicalImage
-•Example:  
+•Example:
 modelName: couch_0 
 pose_pos_x: 1.47894906998 
 pose_pos_y: -1.03072357178 
