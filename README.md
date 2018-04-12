@@ -1,6 +1,8 @@
 # Robotic-Treasure-Hunt
 A Robotic Treasure Hunt Designed for UC Merced CSE 180.
-Problem description•Given the map of an indoor bounded environment, write a robot controller that finds an unknown number of 
+Progams written and designed by Adam Pluguez, Irian Aguiluz, and Jason Vaughan
+Problem description
+•Given the map of an indoor bounded environment, write a robot controller that finds an unknown number of 
 tags hidden in the environment 
 •tags are detected by a given sensor (logical camera — more later) 
 •You must report (print to the screen):
