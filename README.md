@@ -1,6 +1,9 @@
 # Robotic-Treasure-Hunt
 A Robotic Treasure Hunt Designed for UC Merced CSE 180.
 Progams written and designed by Adam Pluguez, Irian Aguiluz, and Jason Vaughan
+Due to the project being setup on each machine local text files in the build folder of the workspace 
+need to overwritten or have locations changed for the workspace to compile.
+
 Problem description
 •Given the map of an indoor bounded environment, write a robot controller that finds an unknown number of 
 tags hidden in the environment 
