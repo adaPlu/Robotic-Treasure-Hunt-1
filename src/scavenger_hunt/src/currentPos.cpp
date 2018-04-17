@@ -12,7 +12,7 @@ Displays All relevent Pose/Position/Orientation Data
 geometry_msgs::Pose currentPose;
 
 
-void poseCallback(const geometry_msgs::PoseWithCovarianceStamped&msg){
+void currentPoseCallBack(const geometry_msgs::PoseWithCovarianceStamped&msg){
   currentPose.position.x = msg.pose.pose.position.x;
   currentPose.position.y = msg.pose.pose.position.y;
   currentPose.position.z = msg.pose.pose.position.z;
@@ -28,7 +28,7 @@ int main(int argc,char ** argv) {
 
   ros::init(argc,argv,"postion");
   ros::NodeHandle nh;
-  ros::Subscriber subCurrentpose = nh.subscribe("/amcl_pose", 5, poseCallback);
+  ros::Subscriber subCurrentpose = nh.subscribe("/amcl_pose", 5, currentPoseCallBack);
   ros::Rate loop_rate(10);
   while (nh.ok() ){
 	ros::spinOnce();

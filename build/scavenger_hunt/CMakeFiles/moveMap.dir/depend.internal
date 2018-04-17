@@ -31,6 +31,8 @@ scavenger_hunt/CMakeFiles/moveMap.dir/src/moveMap.cpp.o
  /opt/ros/kinetic/include/geometry_msgs/Pose.h
  /opt/ros/kinetic/include/geometry_msgs/Pose2D.h
  /opt/ros/kinetic/include/geometry_msgs/PoseStamped.h
+ /opt/ros/kinetic/include/geometry_msgs/PoseWithCovariance.h
+ /opt/ros/kinetic/include/geometry_msgs/PoseWithCovarianceStamped.h
  /opt/ros/kinetic/include/geometry_msgs/Quaternion.h
  /opt/ros/kinetic/include/geometry_msgs/QuaternionStamped.h
  /opt/ros/kinetic/include/geometry_msgs/Transform.h

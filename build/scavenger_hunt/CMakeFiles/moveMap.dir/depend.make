@@ -30,6 +30,8 @@ scavenger_hunt/CMakeFiles/moveMap.dir/src/moveMap.cpp.o: /opt/ros/kinetic/includ
 scavenger_hunt/CMakeFiles/moveMap.dir/src/moveMap.cpp.o: /opt/ros/kinetic/include/geometry_msgs/Pose.h
 scavenger_hunt/CMakeFiles/moveMap.dir/src/moveMap.cpp.o: /opt/ros/kinetic/include/geometry_msgs/Pose2D.h
 scavenger_hunt/CMakeFiles/moveMap.dir/src/moveMap.cpp.o: /opt/ros/kinetic/include/geometry_msgs/PoseStamped.h
+scavenger_hunt/CMakeFiles/moveMap.dir/src/moveMap.cpp.o: /opt/ros/kinetic/include/geometry_msgs/PoseWithCovariance.h
+scavenger_hunt/CMakeFiles/moveMap.dir/src/moveMap.cpp.o: /opt/ros/kinetic/include/geometry_msgs/PoseWithCovarianceStamped.h
 scavenger_hunt/CMakeFiles/moveMap.dir/src/moveMap.cpp.o: /opt/ros/kinetic/include/geometry_msgs/Quaternion.h
 scavenger_hunt/CMakeFiles/moveMap.dir/src/moveMap.cpp.o: /opt/ros/kinetic/include/geometry_msgs/QuaternionStamped.h
 scavenger_hunt/CMakeFiles/moveMap.dir/src/moveMap.cpp.o: /opt/ros/kinetic/include/geometry_msgs/Transform.h

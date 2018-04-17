@@ -6,12 +6,16 @@
 #include "geometry_msgs/Pose2D.h"
 #include <tf2/LinearMath/Quaternion.h>
 #include <tf2_geometry_msgs/tf2_geometry_msgs.h>
+#include <geometry_msgs/PoseWithCovarianceStamped.h>
 
-void recievePose(const geometry_msgs::Pose2D&msg);
+void currentPoseCallBack(const geometry_msgs::PoseWithCovarianceStamped&msg);
+void recieveTargetPose(const geometry_msgs::Pose2D&msg);
 void serviceActivated();
 void serviceDone(const actionlib::SimpleClientGoalState& state,const move_base_msgs::MoveBaseResultConstPtr& result);
 void serviceFeedback(const move_base_msgs::MoveBaseFeedbackConstPtr& fb);
+double getDistance(double x1, double y1, double x2, double y2);
 
+geometry_msgs::Pose currentPose;
 move_base_msgs::MoveBaseGoal goal;
 bool STOP = true;
 typedef actionlib::SimpleActionClient<move_base_msgs::MoveBaseAction> MoveBaseClient;
@@ -19,7 +23,9 @@ typedef actionlib::SimpleActionClient<move_base_msgs::MoveBaseAction> MoveBaseCl
 int main(int argc, char** argv){
   ros::init(argc, argv, "goTo");
   ros::NodeHandle nh;
-  ros::Subscriber subGoalPose;
+  ros::Subscriber subCurrentpose = nh.subscribe("/amcl_pose", 10, &currentPoseCallBack);
+  ros::Subscriber subGoalPose = nh.subscribe("targetpose",10, &recieveTargetPose);
+
   //tell the action client that we want to spin a thread by default
   MoveBaseClient ac("move_base", true);
 
@@ -27,13 +33,14 @@ int main(int argc, char** argv){
   while(!ac.waitForServer(ros::Duration(5.0))){
     ROS_INFO("Waiting for the move_base action server to come up");
   }
-  subGoalPose = nh.subscribe("targetpose",1000,&recievePose);
+  
+
   ros::Rate loop_rate(10);
   while (nh.ok() ){
 	
 	if (STOP == false){
 		ROS_INFO("Sending goal");
-		ac.sendGoal(goal,&serviceDone,&serviceActivated,&serviceFeedback);
+		ac.sendGoal(goal);
 		ac.waitForResult();
 		if(ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED)
    			ROS_INFO("The base moved to goal!");
@@ -49,6 +56,11 @@ int main(int argc, char** argv){
 	}
   return 0;
 }
+
+double getDistance(double x1, double y1, double x2, double y2){
+	return sqrt(pow((x1-x2), 2) + pow((y1-y2), 2));
+}
+
 
 void serviceActivated() {
     ROS_INFO_STREAM("Service received goal");
@@ -67,7 +79,7 @@ void serviceFeedback(const move_base_msgs::MoveBaseFeedbackConstPtr& fb) {
 		    fb->base_position.pose.position.y);
 }
 
-void recievePose(const geometry_msgs::Pose2D&msg) {
+void recieveTargetPose(const geometry_msgs::Pose2D&msg) {
   goal.target_pose.header.frame_id = "map";
   goal.target_pose.header.stamp = ros::Time::now();
   goal.target_pose.pose.position.x = msg.x;
@@ -82,4 +94,15 @@ void recievePose(const geometry_msgs::Pose2D&msg) {
 
 	return;
 
+}
+
+void currentPoseCallBack(const geometry_msgs::PoseWithCovarianceStamped&msg){
+  currentPose.position.x = msg.pose.pose.position.x;
+  currentPose.position.y = msg.pose.pose.position.y;
+  currentPose.position.z = msg.pose.pose.position.z;
+  currentPose.orientation.x = msg.pose.pose.orientation.x;
+  currentPose.orientation.y = msg.pose.pose.orientation.y;
+  currentPose.orientation.z = msg.pose.pose.orientation.z;
+  currentPose.orientation.w = msg.pose.pose.orientation.w;
+  return;
 }

@@ -10,7 +10,7 @@ int main(int argc, char** argv)
 	geometry_msgs::Pose2D pose;
 	const double PI = 3.1416;
 
-	while (ros::ok)
+	while (ros::ok && nh.ok())
 	{
 		std::cout << "X: ";
 		std::cin >> pose.x;
