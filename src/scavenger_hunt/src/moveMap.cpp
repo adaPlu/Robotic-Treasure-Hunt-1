@@ -13,7 +13,7 @@ geometry_msgs::Twist msg;
 int toggle = 1;
 ros::Publisher pub;
 double disttoclosestobject = 30;//Max range of laser 30m
-bool move = false;
+bool move = true;
 /*
 void recieveRanges(const sensor_msgs::LaserScan::ConstPtr& scan) {
 	double disttoclosestobject = 30;
@@ -62,7 +62,7 @@ void poseCallback(const geometry_msgs::PoseStamped&msg){
 */
 
 
-void recieveMap(const nav_msgs::OccupancyGrid& map) {
+void recieveLocalCostMap(const nav_msgs::OccupancyGrid& map) {
 	for(int i =0; i <map.data.size();i++){
 		ROS_INFO("MapData:[%d]", map.data[i]);
 	}
@@ -79,7 +79,7 @@ int main(int argc, char **argv)
   pub = n.advertise<geometry_msgs::Twist>("/husky_velocity_controller/cmd_vel", 1000);
   
   //ros::Subscriber scanlaser  = n.subscribe<sensor_msgs::LaserScan> ("/scan", 10,&recieveRanges);
-  ros::Subscriber map = n.subscribe("/map", 5, recieveMap);
+  ros::Subscriber map = n.subscribe("/move_base/local_costmap/costmap", 5, recieveLocalCostMap);
   ros::Rate loop_rate(10);
   ros::Time startTime = ros::Time::now();
   ros::Duration duration = ros::Duration( rand() % 2 + 1 );
@@ -103,7 +103,6 @@ int main(int argc, char **argv)
 		jSecret = 0;
 	      }
 	    }
-
 	       
 	  	msg.linear.x = iSecret;
 	  	msg.angular.z = jSecret;
