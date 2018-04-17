@@ -2583,6 +2583,19 @@ getpose/fast:
 	$(MAKE) -f scavenger_hunt/CMakeFiles/getpose.dir/build.make scavenger_hunt/CMakeFiles/getpose.dir/build
 .PHONY : getpose/fast
 
+#=============================================================================
+# Target rules for targets named currentPos
+
+# Build rule for target.
+currentPos: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 currentPos
+.PHONY : currentPos
+
+# fast build rule for target.
+currentPos/fast:
+	$(MAKE) -f scavenger_hunt/CMakeFiles/currentPos.dir/build.make scavenger_hunt/CMakeFiles/currentPos.dir/build
+.PHONY : currentPos/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -2782,6 +2795,7 @@ help:
 	@echo "... treasurelocator"
 	@echo "... globalCostMap"
 	@echo "... getpose"
+	@echo "... currentPos"
 .PHONY : help
 
 

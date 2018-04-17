@@ -555,4 +555,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "scavenger_hunt/CMakeFiles/treasurelocator.dir/DependInfo.cmake"
   "scavenger_hunt/CMakeFiles/globalCostMap.dir/DependInfo.cmake"
   "scavenger_hunt/CMakeFiles/getpose.dir/DependInfo.cmake"
+  "scavenger_hunt/CMakeFiles/currentPos.dir/DependInfo.cmake"
   )

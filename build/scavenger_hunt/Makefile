@@ -56,6 +56,17 @@ CMAKE_BINARY_DIR = /home/adam/wsfinal/build
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
+
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
@@ -121,17 +132,6 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
-
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -239,6 +239,48 @@ getpose: scavenger_hunt/CMakeFiles/getpose.dir/rule
 getpose/fast:
 	cd /home/adam/wsfinal/build && $(MAKE) -f scavenger_hunt/CMakeFiles/getpose.dir/build.make scavenger_hunt/CMakeFiles/getpose.dir/build
 .PHONY : getpose/fast
+
+# Convenience name for target.
+scavenger_hunt/CMakeFiles/currentPos.dir/rule:
+	cd /home/adam/wsfinal/build && $(MAKE) -f CMakeFiles/Makefile2 scavenger_hunt/CMakeFiles/currentPos.dir/rule
+.PHONY : scavenger_hunt/CMakeFiles/currentPos.dir/rule
+
+# Convenience name for target.
+currentPos: scavenger_hunt/CMakeFiles/currentPos.dir/rule
+
+.PHONY : currentPos
+
+# fast build rule for target.
+currentPos/fast:
+	cd /home/adam/wsfinal/build && $(MAKE) -f scavenger_hunt/CMakeFiles/currentPos.dir/build.make scavenger_hunt/CMakeFiles/currentPos.dir/build
+.PHONY : currentPos/fast
+
+src/currentPos.o: src/currentPos.cpp.o
+
+.PHONY : src/currentPos.o
+
+# target to build an object file
+src/currentPos.cpp.o:
+	cd /home/adam/wsfinal/build && $(MAKE) -f scavenger_hunt/CMakeFiles/currentPos.dir/build.make scavenger_hunt/CMakeFiles/currentPos.dir/src/currentPos.cpp.o
+.PHONY : src/currentPos.cpp.o
+
+src/currentPos.i: src/currentPos.cpp.i
+
+.PHONY : src/currentPos.i
+
+# target to preprocess a source file
+src/currentPos.cpp.i:
+	cd /home/adam/wsfinal/build && $(MAKE) -f scavenger_hunt/CMakeFiles/currentPos.dir/build.make scavenger_hunt/CMakeFiles/currentPos.dir/src/currentPos.cpp.i
+.PHONY : src/currentPos.cpp.i
+
+src/currentPos.s: src/currentPos.cpp.s
+
+.PHONY : src/currentPos.s
+
+# target to generate assembly for a file
+src/currentPos.cpp.s:
+	cd /home/adam/wsfinal/build && $(MAKE) -f scavenger_hunt/CMakeFiles/currentPos.dir/build.make scavenger_hunt/CMakeFiles/currentPos.dir/src/currentPos.cpp.s
+.PHONY : src/currentPos.cpp.s
 
 src/getpose.o: src/getpose.cpp.o
 
@@ -381,6 +423,7 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... rebuild_cache"
 	@echo "... gotopose"
 	@echo "... moveMap"
 	@echo "... install"
@@ -391,8 +434,11 @@ help:
 	@echo "... install/strip"
 	@echo "... getpose"
 	@echo "... test"
+	@echo "... currentPos"
 	@echo "... edit_cache"
-	@echo "... rebuild_cache"
+	@echo "... src/currentPos.o"
+	@echo "... src/currentPos.i"
+	@echo "... src/currentPos.s"
 	@echo "... src/getpose.o"
 	@echo "... src/getpose.i"
 	@echo "... src/getpose.s"

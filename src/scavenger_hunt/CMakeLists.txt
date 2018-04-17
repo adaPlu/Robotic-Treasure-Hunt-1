@@ -139,6 +139,7 @@ add_executable(moveMap src/moveMap.cpp)
 add_executable(globalCostMap src/globalCostMap.cpp)
 add_executable(gotopose src/gotopose.cpp)
 add_executable(getpose src/getpose.cpp)
+add_executable(currentPos src/currentPos.cpp)
 ## Add cmake target dependencies of the executable
 ## same as for the library above
 # add_dependencies(scavenger_hunt_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
@@ -151,6 +152,7 @@ add_executable(getpose src/getpose.cpp)
 target_link_libraries(treasurelocator ${catkin_LIBRARIES})
 target_link_libraries(moveMap ${catkin_LIBRARIES})
 target_link_libraries(globalCostMap ${catkin_LIBRARIES})
+target_link_libraries(currentPos ${catkin_LIBRARIES})
 target_link_libraries(gotopose ${catkin_LIBRARIES})
 target_link_libraries(getpose ${catkin_LIBRARIES})
 #############

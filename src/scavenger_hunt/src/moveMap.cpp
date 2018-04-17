@@ -1,3 +1,4 @@
+
 #include <ros/ros.h>
 #include <move_base_msgs/MoveBaseAction.h>
 #include <actionlib/client/simple_action_client.h>
@@ -12,7 +13,7 @@ bool STOP = true;
 typedef actionlib::SimpleActionClient<move_base_msgs::MoveBaseAction> MoveBaseClient;
 
 int main(int argc, char** argv){
-  ros::init(argc, argv, "goToTimeout");
+  ros::init(argc, argv, "goTo");
   ros::NodeHandle nh;
   ros::Subscriber subGoalPose;
   //tell the action client that we want to spin a thread by default
@@ -22,21 +23,22 @@ int main(int argc, char** argv){
   while(!ac.waitForServer(ros::Duration(5.0))){
     ROS_INFO("Waiting for the move_base action server to come up");
   }
-  subGoalPose = nh.subscribe("nextGoal",1000,&recievePose);
+  subGoalPose = nh.subscribe("targetpose",1000,&recievePose);
   ros::Rate loop_rate(10);
   while (nh.ok() ){
 	
 	if (STOP == false){
 		ROS_INFO("Sending goal");
-  		ac.sendGoalAndWait(goal, ros::Duration(5.0));
+  		ac.sendGoal(goal);
+		ac.waitForResult();
 		if(ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED)
-   		    ROS_INFO("The base moved to goal!");
+   			ROS_INFO("The base moved to goal!");
   		else
-    		    ROS_INFO("The base failed to move to goal within five seconds.");
+    			ROS_INFO("The base failed to move to goal for some reason.");
 			STOP = true;
 	}
 	else{
-		ROS_INFO("Waiting on pose...");	
+		ROS_INFO("Waiting on pose...");
 	}
 	loop_rate.sleep();
 	ros::spinOnce(); 
@@ -45,7 +47,7 @@ int main(int argc, char** argv){
 }
 
 void recievePose(const geometry_msgs::Pose2D&msg) {
-  goal.target_pose.header.frame_id = "base_link";
+  goal.target_pose.header.frame_id = "map";
   goal.target_pose.header.stamp = ros::Time::now();
   goal.target_pose.pose.position.x = msg.x;
   goal.target_pose.pose.position.y = msg.y;
