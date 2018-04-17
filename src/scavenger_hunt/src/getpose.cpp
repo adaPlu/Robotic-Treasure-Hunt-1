@@ -6,7 +6,7 @@ int main(int argc, char** argv)
 {
 	ros::init(argc, argv, "getpose");
 	ros::NodeHandle nh;
-	ros::Publisher send = nh.advertise<geometry_msgs::Pose2D>("targetpose", 1000);
+	ros::Publisher send = nh.advertise<geometry_msgs::Pose2D>("nextGoal", 1000);
 	geometry_msgs::Pose2D pose;
 	const double PI = 3.1416;
 

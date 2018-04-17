@@ -2545,19 +2545,6 @@ moveMap/fast:
 .PHONY : moveMap/fast
 
 #=============================================================================
-# Target rules for targets named getpose
-
-# Build rule for target.
-getpose: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 getpose
-.PHONY : getpose
-
-# fast build rule for target.
-getpose/fast:
-	$(MAKE) -f scavenger_hunt/CMakeFiles/getpose.dir/build.make scavenger_hunt/CMakeFiles/getpose.dir/build
-.PHONY : getpose/fast
-
-#=============================================================================
 # Target rules for targets named treasurelocator
 
 # Build rule for target.
@@ -2569,6 +2556,32 @@ treasurelocator: cmake_check_build_system
 treasurelocator/fast:
 	$(MAKE) -f scavenger_hunt/CMakeFiles/treasurelocator.dir/build.make scavenger_hunt/CMakeFiles/treasurelocator.dir/build
 .PHONY : treasurelocator/fast
+
+#=============================================================================
+# Target rules for targets named globalCostMap
+
+# Build rule for target.
+globalCostMap: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 globalCostMap
+.PHONY : globalCostMap
+
+# fast build rule for target.
+globalCostMap/fast:
+	$(MAKE) -f scavenger_hunt/CMakeFiles/globalCostMap.dir/build.make scavenger_hunt/CMakeFiles/globalCostMap.dir/build
+.PHONY : globalCostMap/fast
+
+#=============================================================================
+# Target rules for targets named getpose
+
+# Build rule for target.
+getpose: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 getpose
+.PHONY : getpose
+
+# fast build rule for target.
+getpose/fast:
+	$(MAKE) -f scavenger_hunt/CMakeFiles/getpose.dir/build.make scavenger_hunt/CMakeFiles/getpose.dir/build
+.PHONY : getpose/fast
 
 # Help Target
 help:
@@ -2766,8 +2779,9 @@ help:
 	@echo "... actionlib_generate_messages_nodejs"
 	@echo "... gotopose"
 	@echo "... moveMap"
-	@echo "... getpose"
 	@echo "... treasurelocator"
+	@echo "... globalCostMap"
+	@echo "... getpose"
 .PHONY : help
 
 

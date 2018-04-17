@@ -552,6 +552,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "logical_camera_plugin/CMakeFiles/actionlib_generate_messages_nodejs.dir/DependInfo.cmake"
   "scavenger_hunt/CMakeFiles/gotopose.dir/DependInfo.cmake"
   "scavenger_hunt/CMakeFiles/moveMap.dir/DependInfo.cmake"
-  "scavenger_hunt/CMakeFiles/getpose.dir/DependInfo.cmake"
   "scavenger_hunt/CMakeFiles/treasurelocator.dir/DependInfo.cmake"
+  "scavenger_hunt/CMakeFiles/globalCostMap.dir/DependInfo.cmake"
+  "scavenger_hunt/CMakeFiles/getpose.dir/DependInfo.cmake"
   )

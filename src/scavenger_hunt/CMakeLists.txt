@@ -136,6 +136,7 @@ include_directories(
 # add_executable(scavenger_hunt_node src/scavenger_hunt_node.cpp)
 add_executable(treasurelocator src/treasurelocator.cpp)
 add_executable(moveMap src/moveMap.cpp)
+add_executable(globalCostMap src/globalCostMap.cpp)
 add_executable(gotopose src/gotopose.cpp)
 add_executable(getpose src/getpose.cpp)
 ## Add cmake target dependencies of the executable
@@ -149,6 +150,7 @@ add_executable(getpose src/getpose.cpp)
 
 target_link_libraries(treasurelocator ${catkin_LIBRARIES})
 target_link_libraries(moveMap ${catkin_LIBRARIES})
+target_link_libraries(globalCostMap ${catkin_LIBRARIES})
 target_link_libraries(gotopose ${catkin_LIBRARIES})
 target_link_libraries(getpose ${catkin_LIBRARIES})
 #############
