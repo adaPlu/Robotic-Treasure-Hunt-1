@@ -1,7 +1,4 @@
 /*
-Adam Pluguez
-CSE180
-2/17/18
 Displays All relevent Pose/Position/Orientation Data
 */
 

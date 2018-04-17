@@ -8,7 +8,7 @@
 
 /home/adam/wsfinal/src/scavenger_hunt/src/globalCostMap.cpp
 ros/ros.h
-/home/adam/wsfinal/src/scavenger_hunt/src/ros/ros.h
+-
 nav_msgs/OccupancyGrid.h
 -
 fstream

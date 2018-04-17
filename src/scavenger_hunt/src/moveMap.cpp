@@ -1,4 +1,5 @@
 
+/*Uses Move bases to move to receieved point. Will be configured to go to fixed map points based on map size?*/
 #include <ros/ros.h>
 #include <move_base_msgs/MoveBaseAction.h>
 #include <actionlib/client/simple_action_client.h>
@@ -7,6 +8,9 @@
 #include <tf2_geometry_msgs/tf2_geometry_msgs.h>
 
 void recievePose(const geometry_msgs::Pose2D&msg);
+void serviceActivated();
+void serviceDone(const actionlib::SimpleClientGoalState& state,const move_base_msgs::MoveBaseResultConstPtr& result);
+void serviceFeedback(const move_base_msgs::MoveBaseFeedbackConstPtr& fb);
 
 move_base_msgs::MoveBaseGoal goal;
 bool STOP = true;
@@ -29,7 +33,7 @@ int main(int argc, char** argv){
 	
 	if (STOP == false){
 		ROS_INFO("Sending goal");
-  		ac.sendGoal(goal);
+		ac.sendGoal(goal,&serviceDone,&serviceActivated,&serviceFeedback);
 		ac.waitForResult();
 		if(ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED)
    			ROS_INFO("The base moved to goal!");
@@ -44,6 +48,23 @@ int main(int argc, char** argv){
 	ros::spinOnce(); 
 	}
   return 0;
+}
+
+void serviceActivated() {
+    ROS_INFO_STREAM("Service received goal");
+}
+
+void serviceDone(const actionlib::SimpleClientGoalState& state,const move_base_msgs::MoveBaseResultConstPtr& result) {
+    ROS_INFO_STREAM("Service completed");
+    ROS_INFO_STREAM("Final state " << state.toString().c_str());
+    ros::shutdown();
+}
+
+void serviceFeedback(const move_base_msgs::MoveBaseFeedbackConstPtr& fb) {
+    ROS_INFO_STREAM("Service still running");
+    ROS_INFO_STREAM("Current pose (x,y) " <<
+		    fb->base_position.pose.position.x << "," <<
+		    fb->base_position.pose.position.y);
 }
 
 void recievePose(const geometry_msgs::Pose2D&msg) {
