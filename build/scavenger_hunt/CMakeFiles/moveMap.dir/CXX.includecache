@@ -21,6 +21,8 @@ tf2_geometry_msgs/tf2_geometry_msgs.h
 -
 geometry_msgs/PoseWithCovarianceStamped.h
 -
+geometry_msgs/Twist.h
+-
 
 /opt/ros/kinetic/include/actionlib/action_definition.h
 
@@ -504,6 +506,26 @@ ros/message_operations.h
 std_msgs/Header.h
 -
 geometry_msgs/Transform.h
+-
+
+/opt/ros/kinetic/include/geometry_msgs/Twist.h
+string
+-
+vector
+-
+map
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
+geometry_msgs/Vector3.h
+-
+geometry_msgs/Vector3.h
 -
 
 /opt/ros/kinetic/include/geometry_msgs/Vector3.h

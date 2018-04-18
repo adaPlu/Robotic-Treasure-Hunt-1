@@ -37,6 +37,7 @@ scavenger_hunt/CMakeFiles/moveMap.dir/src/moveMap.cpp.o
  /opt/ros/kinetic/include/geometry_msgs/QuaternionStamped.h
  /opt/ros/kinetic/include/geometry_msgs/Transform.h
  /opt/ros/kinetic/include/geometry_msgs/TransformStamped.h
+ /opt/ros/kinetic/include/geometry_msgs/Twist.h
  /opt/ros/kinetic/include/geometry_msgs/Vector3.h
  /opt/ros/kinetic/include/geometry_msgs/Vector3Stamped.h
  /opt/ros/kinetic/include/kdl/frames.hpp
