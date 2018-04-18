@@ -1,0 +1,12 @@
+<launch>
+  <node
+    pkg="scavenger_hunt"
+    type="moveMap"
+    name="moveMap"
+  />
+  <node
+    pkg="scavenger_hunt"
+    type="treasurelocator"
+    name="treasurelocator"
+  />
+</launch>

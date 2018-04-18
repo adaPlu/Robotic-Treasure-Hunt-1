@@ -2519,19 +2519,6 @@ actionlib_generate_messages_nodejs/fast:
 .PHONY : actionlib_generate_messages_nodejs/fast
 
 #=============================================================================
-# Target rules for targets named gotopose
-
-# Build rule for target.
-gotopose: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 gotopose
-.PHONY : gotopose
-
-# fast build rule for target.
-gotopose/fast:
-	$(MAKE) -f scavenger_hunt/CMakeFiles/gotopose.dir/build.make scavenger_hunt/CMakeFiles/gotopose.dir/build
-.PHONY : gotopose/fast
-
-#=============================================================================
 # Target rules for targets named moveMap
 
 # Build rule for target.
@@ -2558,19 +2545,6 @@ treasurelocator/fast:
 .PHONY : treasurelocator/fast
 
 #=============================================================================
-# Target rules for targets named globalCostMap
-
-# Build rule for target.
-globalCostMap: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 globalCostMap
-.PHONY : globalCostMap
-
-# fast build rule for target.
-globalCostMap/fast:
-	$(MAKE) -f scavenger_hunt/CMakeFiles/globalCostMap.dir/build.make scavenger_hunt/CMakeFiles/globalCostMap.dir/build
-.PHONY : globalCostMap/fast
-
-#=============================================================================
 # Target rules for targets named getpose
 
 # Build rule for target.
@@ -2582,6 +2556,19 @@ getpose: cmake_check_build_system
 getpose/fast:
 	$(MAKE) -f scavenger_hunt/CMakeFiles/getpose.dir/build.make scavenger_hunt/CMakeFiles/getpose.dir/build
 .PHONY : getpose/fast
+
+#=============================================================================
+# Target rules for targets named globalCostMap
+
+# Build rule for target.
+globalCostMap: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 globalCostMap
+.PHONY : globalCostMap
+
+# fast build rule for target.
+globalCostMap/fast:
+	$(MAKE) -f scavenger_hunt/CMakeFiles/globalCostMap.dir/build.make scavenger_hunt/CMakeFiles/globalCostMap.dir/build
+.PHONY : globalCostMap/fast
 
 #=============================================================================
 # Target rules for targets named currentPos
@@ -2790,11 +2777,10 @@ help:
 	@echo "... actionlib_generate_messages_lisp"
 	@echo "... actionlib_msgs_generate_messages_cpp"
 	@echo "... actionlib_generate_messages_nodejs"
-	@echo "... gotopose"
 	@echo "... moveMap"
 	@echo "... treasurelocator"
-	@echo "... globalCostMap"
 	@echo "... getpose"
+	@echo "... globalCostMap"
 	@echo "... currentPos"
 .PHONY : help
 
