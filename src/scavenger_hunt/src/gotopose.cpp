@@ -5,6 +5,7 @@
 #include <geometry_msgs/Quaternion.h>
 #include <tf/transform_datatypes.h>
 #include <queue>
+
 using namespace std;
 
 class Point{
@@ -63,7 +64,7 @@ while(ros::ok()){
 
 		ac.sendGoal(goal);
 
-		ac.waitForResult();
+		ac.waitForResult(ros::Duration(5.0));
 
 		if(ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED){
 
