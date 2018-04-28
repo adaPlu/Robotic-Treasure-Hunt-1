@@ -8,5 +8,6 @@
     pkg="scavenger_hunt"
     type="treasurelocator"
     name="treasurelocator"
+    output="screen"
   />
 </launch>

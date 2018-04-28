@@ -52,7 +52,7 @@ int main(int argc, char** argv){
     ROS_INFO("Waiting for the move_base action server to come up");
   }
   
-  //turn(13, 1, 1);
+  turn(13, 1, 1);
  
   ROS_INFO("Sending goal");
   ac.sendGoal(goal,&serviceDone,&serviceActivated,&serviceFeedback);
@@ -120,23 +120,7 @@ int main(int argc, char** argv){
 			  turn(13, 1, 1);
   }
 
-  goal.target_pose.header.frame_id = "map";
-  goal.target_pose.header.stamp = ros::Time::now();
-  goal.target_pose.pose.position.x = 0;
-  goal.target_pose.pose.position.y = 0;
-  goal.target_pose.pose.orientation.w = 1;
-
-  ROS_INFO("Sending goal");
-  ac.sendGoal(goal,&serviceDone,&serviceActivated,&serviceFeedback);
-	ac.waitForResult();
-	if(ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED){
-   			ROS_INFO("The base moved to goal!");
-			  turn(13, 1, 1);
-	}
-  else{
-    		ROS_INFO("The base failed to move to goal for some reason.");
-			  turn(13, 1, 1);
-  }
+  
 
   goal.target_pose.header.frame_id = "map";
   goal.target_pose.header.stamp = ros::Time::now();
