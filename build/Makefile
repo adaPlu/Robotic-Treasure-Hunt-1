@@ -2519,6 +2519,19 @@ actionlib_generate_messages_nodejs/fast:
 .PHONY : actionlib_generate_messages_nodejs/fast
 
 #=============================================================================
+# Target rules for targets named currentPos
+
+# Build rule for target.
+currentPos: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 currentPos
+.PHONY : currentPos
+
+# fast build rule for target.
+currentPos/fast:
+	$(MAKE) -f scavenger_hunt/CMakeFiles/currentPos.dir/build.make scavenger_hunt/CMakeFiles/currentPos.dir/build
+.PHONY : currentPos/fast
+
+#=============================================================================
 # Target rules for targets named moveMap
 
 # Build rule for target.
@@ -2530,19 +2543,6 @@ moveMap: cmake_check_build_system
 moveMap/fast:
 	$(MAKE) -f scavenger_hunt/CMakeFiles/moveMap.dir/build.make scavenger_hunt/CMakeFiles/moveMap.dir/build
 .PHONY : moveMap/fast
-
-#=============================================================================
-# Target rules for targets named treasurelocator
-
-# Build rule for target.
-treasurelocator: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 treasurelocator
-.PHONY : treasurelocator
-
-# fast build rule for target.
-treasurelocator/fast:
-	$(MAKE) -f scavenger_hunt/CMakeFiles/treasurelocator.dir/build.make scavenger_hunt/CMakeFiles/treasurelocator.dir/build
-.PHONY : treasurelocator/fast
 
 #=============================================================================
 # Target rules for targets named getpose
@@ -2558,30 +2558,17 @@ getpose/fast:
 .PHONY : getpose/fast
 
 #=============================================================================
-# Target rules for targets named globalCostMap
+# Target rules for targets named treasurelocator
 
 # Build rule for target.
-globalCostMap: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 globalCostMap
-.PHONY : globalCostMap
+treasurelocator: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 treasurelocator
+.PHONY : treasurelocator
 
 # fast build rule for target.
-globalCostMap/fast:
-	$(MAKE) -f scavenger_hunt/CMakeFiles/globalCostMap.dir/build.make scavenger_hunt/CMakeFiles/globalCostMap.dir/build
-.PHONY : globalCostMap/fast
-
-#=============================================================================
-# Target rules for targets named currentPos
-
-# Build rule for target.
-currentPos: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 currentPos
-.PHONY : currentPos
-
-# fast build rule for target.
-currentPos/fast:
-	$(MAKE) -f scavenger_hunt/CMakeFiles/currentPos.dir/build.make scavenger_hunt/CMakeFiles/currentPos.dir/build
-.PHONY : currentPos/fast
+treasurelocator/fast:
+	$(MAKE) -f scavenger_hunt/CMakeFiles/treasurelocator.dir/build.make scavenger_hunt/CMakeFiles/treasurelocator.dir/build
+.PHONY : treasurelocator/fast
 
 # Help Target
 help:
@@ -2777,11 +2764,10 @@ help:
 	@echo "... actionlib_generate_messages_lisp"
 	@echo "... actionlib_msgs_generate_messages_cpp"
 	@echo "... actionlib_generate_messages_nodejs"
-	@echo "... moveMap"
-	@echo "... treasurelocator"
-	@echo "... getpose"
-	@echo "... globalCostMap"
 	@echo "... currentPos"
+	@echo "... moveMap"
+	@echo "... getpose"
+	@echo "... treasurelocator"
 .PHONY : help
 
 

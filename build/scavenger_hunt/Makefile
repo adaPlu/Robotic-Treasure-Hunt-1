@@ -56,6 +56,17 @@ CMAKE_BINARY_DIR = /home/adam/wsfinal/build
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
+
 # Special rule for the target test
 test:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
@@ -66,18 +77,6 @@ test:
 test/fast: test
 
 .PHONY : test/fast
-
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
 
 # Special rule for the target list_install_components
 list_install_components:
@@ -111,17 +110,6 @@ install/local/fast: install/local
 
 .PHONY : install/local/fast
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -132,6 +120,18 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -166,6 +166,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+scavenger_hunt/CMakeFiles/currentPos.dir/rule:
+	cd /home/adam/wsfinal/build && $(MAKE) -f CMakeFiles/Makefile2 scavenger_hunt/CMakeFiles/currentPos.dir/rule
+.PHONY : scavenger_hunt/CMakeFiles/currentPos.dir/rule
+
+# Convenience name for target.
+currentPos: scavenger_hunt/CMakeFiles/currentPos.dir/rule
+
+.PHONY : currentPos
+
+# fast build rule for target.
+currentPos/fast:
+	cd /home/adam/wsfinal/build && $(MAKE) -f scavenger_hunt/CMakeFiles/currentPos.dir/build.make scavenger_hunt/CMakeFiles/currentPos.dir/build
+.PHONY : currentPos/fast
+
+# Convenience name for target.
 scavenger_hunt/CMakeFiles/moveMap.dir/rule:
 	cd /home/adam/wsfinal/build && $(MAKE) -f CMakeFiles/Makefile2 scavenger_hunt/CMakeFiles/moveMap.dir/rule
 .PHONY : scavenger_hunt/CMakeFiles/moveMap.dir/rule
@@ -179,21 +194,6 @@ moveMap: scavenger_hunt/CMakeFiles/moveMap.dir/rule
 moveMap/fast:
 	cd /home/adam/wsfinal/build && $(MAKE) -f scavenger_hunt/CMakeFiles/moveMap.dir/build.make scavenger_hunt/CMakeFiles/moveMap.dir/build
 .PHONY : moveMap/fast
-
-# Convenience name for target.
-scavenger_hunt/CMakeFiles/treasurelocator.dir/rule:
-	cd /home/adam/wsfinal/build && $(MAKE) -f CMakeFiles/Makefile2 scavenger_hunt/CMakeFiles/treasurelocator.dir/rule
-.PHONY : scavenger_hunt/CMakeFiles/treasurelocator.dir/rule
-
-# Convenience name for target.
-treasurelocator: scavenger_hunt/CMakeFiles/treasurelocator.dir/rule
-
-.PHONY : treasurelocator
-
-# fast build rule for target.
-treasurelocator/fast:
-	cd /home/adam/wsfinal/build && $(MAKE) -f scavenger_hunt/CMakeFiles/treasurelocator.dir/build.make scavenger_hunt/CMakeFiles/treasurelocator.dir/build
-.PHONY : treasurelocator/fast
 
 # Convenience name for target.
 scavenger_hunt/CMakeFiles/getpose.dir/rule:
@@ -211,34 +211,19 @@ getpose/fast:
 .PHONY : getpose/fast
 
 # Convenience name for target.
-scavenger_hunt/CMakeFiles/globalCostMap.dir/rule:
-	cd /home/adam/wsfinal/build && $(MAKE) -f CMakeFiles/Makefile2 scavenger_hunt/CMakeFiles/globalCostMap.dir/rule
-.PHONY : scavenger_hunt/CMakeFiles/globalCostMap.dir/rule
+scavenger_hunt/CMakeFiles/treasurelocator.dir/rule:
+	cd /home/adam/wsfinal/build && $(MAKE) -f CMakeFiles/Makefile2 scavenger_hunt/CMakeFiles/treasurelocator.dir/rule
+.PHONY : scavenger_hunt/CMakeFiles/treasurelocator.dir/rule
 
 # Convenience name for target.
-globalCostMap: scavenger_hunt/CMakeFiles/globalCostMap.dir/rule
+treasurelocator: scavenger_hunt/CMakeFiles/treasurelocator.dir/rule
 
-.PHONY : globalCostMap
+.PHONY : treasurelocator
 
 # fast build rule for target.
-globalCostMap/fast:
-	cd /home/adam/wsfinal/build && $(MAKE) -f scavenger_hunt/CMakeFiles/globalCostMap.dir/build.make scavenger_hunt/CMakeFiles/globalCostMap.dir/build
-.PHONY : globalCostMap/fast
-
-# Convenience name for target.
-scavenger_hunt/CMakeFiles/currentPos.dir/rule:
-	cd /home/adam/wsfinal/build && $(MAKE) -f CMakeFiles/Makefile2 scavenger_hunt/CMakeFiles/currentPos.dir/rule
-.PHONY : scavenger_hunt/CMakeFiles/currentPos.dir/rule
-
-# Convenience name for target.
-currentPos: scavenger_hunt/CMakeFiles/currentPos.dir/rule
-
-.PHONY : currentPos
-
-# fast build rule for target.
-currentPos/fast:
-	cd /home/adam/wsfinal/build && $(MAKE) -f scavenger_hunt/CMakeFiles/currentPos.dir/build.make scavenger_hunt/CMakeFiles/currentPos.dir/build
-.PHONY : currentPos/fast
+treasurelocator/fast:
+	cd /home/adam/wsfinal/build && $(MAKE) -f scavenger_hunt/CMakeFiles/treasurelocator.dir/build.make scavenger_hunt/CMakeFiles/treasurelocator.dir/build
+.PHONY : treasurelocator/fast
 
 src/currentPos.o: src/currentPos.cpp.o
 
@@ -293,33 +278,6 @@ src/getpose.s: src/getpose.cpp.s
 src/getpose.cpp.s:
 	cd /home/adam/wsfinal/build && $(MAKE) -f scavenger_hunt/CMakeFiles/getpose.dir/build.make scavenger_hunt/CMakeFiles/getpose.dir/src/getpose.cpp.s
 .PHONY : src/getpose.cpp.s
-
-src/globalCostMap.o: src/globalCostMap.cpp.o
-
-.PHONY : src/globalCostMap.o
-
-# target to build an object file
-src/globalCostMap.cpp.o:
-	cd /home/adam/wsfinal/build && $(MAKE) -f scavenger_hunt/CMakeFiles/globalCostMap.dir/build.make scavenger_hunt/CMakeFiles/globalCostMap.dir/src/globalCostMap.cpp.o
-.PHONY : src/globalCostMap.cpp.o
-
-src/globalCostMap.i: src/globalCostMap.cpp.i
-
-.PHONY : src/globalCostMap.i
-
-# target to preprocess a source file
-src/globalCostMap.cpp.i:
-	cd /home/adam/wsfinal/build && $(MAKE) -f scavenger_hunt/CMakeFiles/globalCostMap.dir/build.make scavenger_hunt/CMakeFiles/globalCostMap.dir/src/globalCostMap.cpp.i
-.PHONY : src/globalCostMap.cpp.i
-
-src/globalCostMap.s: src/globalCostMap.cpp.s
-
-.PHONY : src/globalCostMap.s
-
-# target to generate assembly for a file
-src/globalCostMap.cpp.s:
-	cd /home/adam/wsfinal/build && $(MAKE) -f scavenger_hunt/CMakeFiles/globalCostMap.dir/build.make scavenger_hunt/CMakeFiles/globalCostMap.dir/src/globalCostMap.cpp.s
-.PHONY : src/globalCostMap.cpp.s
 
 src/moveMap.o: src/moveMap.cpp.o
 
@@ -381,27 +339,23 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... currentPos"
+	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... moveMap"
-	@echo "... install"
-	@echo "... treasurelocator"
 	@echo "... list_install_components"
 	@echo "... getpose"
 	@echo "... install/strip"
 	@echo "... install/local"
-	@echo "... globalCostMap"
-	@echo "... currentPos"
-	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... treasurelocator"
+	@echo "... install"
 	@echo "... src/currentPos.o"
 	@echo "... src/currentPos.i"
 	@echo "... src/currentPos.s"
 	@echo "... src/getpose.o"
 	@echo "... src/getpose.i"
 	@echo "... src/getpose.s"
-	@echo "... src/globalCostMap.o"
-	@echo "... src/globalCostMap.i"
-	@echo "... src/globalCostMap.s"
 	@echo "... src/moveMap.o"
 	@echo "... src/moveMap.i"
 	@echo "... src/moveMap.s"

@@ -14,10 +14,10 @@ scavenger_hunt/CMakeFiles/treasurelocator.dir/src/treasurelocator.cpp.o: /opt/ro
 scavenger_hunt/CMakeFiles/treasurelocator.dir/src/treasurelocator.cpp.o: /opt/ros/kinetic/include/geometry_msgs/QuaternionStamped.h
 scavenger_hunt/CMakeFiles/treasurelocator.dir/src/treasurelocator.cpp.o: /opt/ros/kinetic/include/geometry_msgs/Transform.h
 scavenger_hunt/CMakeFiles/treasurelocator.dir/src/treasurelocator.cpp.o: /opt/ros/kinetic/include/geometry_msgs/TransformStamped.h
+scavenger_hunt/CMakeFiles/treasurelocator.dir/src/treasurelocator.cpp.o: /opt/ros/kinetic/include/geometry_msgs/Twist.h
+scavenger_hunt/CMakeFiles/treasurelocator.dir/src/treasurelocator.cpp.o: /opt/ros/kinetic/include/geometry_msgs/TwistStamped.h
 scavenger_hunt/CMakeFiles/treasurelocator.dir/src/treasurelocator.cpp.o: /opt/ros/kinetic/include/geometry_msgs/Vector3.h
 scavenger_hunt/CMakeFiles/treasurelocator.dir/src/treasurelocator.cpp.o: /opt/ros/kinetic/include/geometry_msgs/Vector3Stamped.h
-scavenger_hunt/CMakeFiles/treasurelocator.dir/src/treasurelocator.cpp.o: /opt/ros/kinetic/include/nav_msgs/MapMetaData.h
-scavenger_hunt/CMakeFiles/treasurelocator.dir/src/treasurelocator.cpp.o: /opt/ros/kinetic/include/nav_msgs/OccupancyGrid.h
 scavenger_hunt/CMakeFiles/treasurelocator.dir/src/treasurelocator.cpp.o: /opt/ros/kinetic/include/ros/advertise_options.h
 scavenger_hunt/CMakeFiles/treasurelocator.dir/src/treasurelocator.cpp.o: /opt/ros/kinetic/include/ros/advertise_service_options.h
 scavenger_hunt/CMakeFiles/treasurelocator.dir/src/treasurelocator.cpp.o: /opt/ros/kinetic/include/ros/assert.h
@@ -80,7 +80,23 @@ scavenger_hunt/CMakeFiles/treasurelocator.dir/src/treasurelocator.cpp.o: /opt/ro
 scavenger_hunt/CMakeFiles/treasurelocator.dir/src/treasurelocator.cpp.o: /opt/ros/kinetic/include/tf/LinearMath/Scalar.h
 scavenger_hunt/CMakeFiles/treasurelocator.dir/src/treasurelocator.cpp.o: /opt/ros/kinetic/include/tf/LinearMath/Transform.h
 scavenger_hunt/CMakeFiles/treasurelocator.dir/src/treasurelocator.cpp.o: /opt/ros/kinetic/include/tf/LinearMath/Vector3.h
+scavenger_hunt/CMakeFiles/treasurelocator.dir/src/treasurelocator.cpp.o: /opt/ros/kinetic/include/tf/exceptions.h
+scavenger_hunt/CMakeFiles/treasurelocator.dir/src/treasurelocator.cpp.o: /opt/ros/kinetic/include/tf/tf.h
+scavenger_hunt/CMakeFiles/treasurelocator.dir/src/treasurelocator.cpp.o: /opt/ros/kinetic/include/tf/time_cache.h
 scavenger_hunt/CMakeFiles/treasurelocator.dir/src/treasurelocator.cpp.o: /opt/ros/kinetic/include/tf/transform_datatypes.h
+scavenger_hunt/CMakeFiles/treasurelocator.dir/src/treasurelocator.cpp.o: /opt/ros/kinetic/include/tf2/LinearMath/Quaternion.h
+scavenger_hunt/CMakeFiles/treasurelocator.dir/src/treasurelocator.cpp.o: /opt/ros/kinetic/include/tf2/LinearMath/Vector3.h
+scavenger_hunt/CMakeFiles/treasurelocator.dir/src/treasurelocator.cpp.o: /opt/ros/kinetic/include/tf2/buffer_core.h
+scavenger_hunt/CMakeFiles/treasurelocator.dir/src/treasurelocator.cpp.o: /opt/ros/kinetic/include/tf2/convert.h
+scavenger_hunt/CMakeFiles/treasurelocator.dir/src/treasurelocator.cpp.o: /opt/ros/kinetic/include/tf2/exceptions.h
+scavenger_hunt/CMakeFiles/treasurelocator.dir/src/treasurelocator.cpp.o: /opt/ros/kinetic/include/tf2/impl/convert.h
+scavenger_hunt/CMakeFiles/treasurelocator.dir/src/treasurelocator.cpp.o: /opt/ros/kinetic/include/tf2/transform_datatypes.h
+scavenger_hunt/CMakeFiles/treasurelocator.dir/src/treasurelocator.cpp.o: /opt/ros/kinetic/include/tf2/transform_storage.h
+scavenger_hunt/CMakeFiles/treasurelocator.dir/src/treasurelocator.cpp.o: /opt/ros/kinetic/include/tf2_msgs/FrameGraph.h
+scavenger_hunt/CMakeFiles/treasurelocator.dir/src/treasurelocator.cpp.o: /opt/ros/kinetic/include/tf2_msgs/FrameGraphRequest.h
+scavenger_hunt/CMakeFiles/treasurelocator.dir/src/treasurelocator.cpp.o: /opt/ros/kinetic/include/tf2_msgs/FrameGraphResponse.h
+scavenger_hunt/CMakeFiles/treasurelocator.dir/src/treasurelocator.cpp.o: /opt/ros/kinetic/include/tf2_ros/buffer.h
+scavenger_hunt/CMakeFiles/treasurelocator.dir/src/treasurelocator.cpp.o: /opt/ros/kinetic/include/tf2_ros/buffer_interface.h
 scavenger_hunt/CMakeFiles/treasurelocator.dir/src/treasurelocator.cpp.o: /opt/ros/kinetic/include/xmlrpcpp/XmlRpcDecl.h
 scavenger_hunt/CMakeFiles/treasurelocator.dir/src/treasurelocator.cpp.o: /opt/ros/kinetic/include/xmlrpcpp/XmlRpcValue.h
 

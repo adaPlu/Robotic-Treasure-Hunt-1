@@ -12,6 +12,7 @@ Uses Move base to move to receieved point. Will be configured to go to 9 fixed m
 #include <tf2_geometry_msgs/tf2_geometry_msgs.h>
 #include <geometry_msgs/PoseWithCovarianceStamped.h>
 #include <geometry_msgs/Twist.h>
+#include <time.h>
 
 void currentPoseCallBack(const geometry_msgs::PoseWithCovarianceStamped&msg);
 void recieveTargetPose(const geometry_msgs::Pose2D&msg);
@@ -19,6 +20,7 @@ void serviceActivated();
 void serviceDone(const actionlib::SimpleClientGoalState& state,const move_base_msgs::MoveBaseResultConstPtr& result);
 void serviceFeedback(const move_base_msgs::MoveBaseFeedbackConstPtr& fb);
 double getDistance(double x1, double y1, double x2, double y2);
+void scan360();
 void turn(double rel_angle, double ang_speed, bool isClockwise);
 
 ros::Publisher vel;
@@ -27,12 +29,20 @@ move_base_msgs::MoveBaseGoal goal;
 bool STOP = true;
 typedef actionlib::SimpleActionClient<move_base_msgs::MoveBaseAction> MoveBaseClient;
 
+
 int main(int argc, char** argv){
-  ros::init(argc, argv, "goTo");
+  ros::init(argc, argv, "moveMap");
   ros::NodeHandle nh;
   ros::Subscriber subCurrentpose = nh.subscribe("/amcl_pose", 10, &currentPoseCallBack);
-  ros::Subscriber subGoalPose = nh.subscribe("targetpose",10, &recieveTargetPose);
+  //ros::Subscriber subGoalPose = nh.subscribe("targetpose",10, &recieveTargetPose);
   vel =nh.advertise<geometry_msgs::Twist>("/husky_velocity_controller/cmd_vel", 10);
+  ros::Rate loop_rate(10);
+
+ goal.target_pose.header.frame_id = "map";
+ goal.target_pose.header.stamp = ros::Time::now();
+ goal.target_pose.pose.position.x = 8;
+ goal.target_pose.pose.position.y = 8;
+ goal.target_pose.pose.orientation.w = 1;
 
   //tell the action client that we want to spin a thread by default
   MoveBaseClient ac("move_base", true);
@@ -42,34 +52,169 @@ int main(int argc, char** argv){
     ROS_INFO("Waiting for the move_base action server to come up");
   }
   
-
-  ros::Rate loop_rate(10);
-  while (nh.ok() ){
-	
-	if (STOP == false){
-		ROS_INFO("Sending goal");
-		//ac.sendGoal(goal);
-		ac.sendGoal(goal,&serviceDone,&serviceActivated,&serviceFeedback);
-		ac.waitForResult();
-		if(ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED){
+  //turn(13, 1, 1);
+ 
+  ROS_INFO("Sending goal");
+  ac.sendGoal(goal,&serviceDone,&serviceActivated,&serviceFeedback);
+	ac.waitForResult();
+	if(ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED){
    			ROS_INFO("The base moved to goal!");
-			turn(2.5, 0.5, true);
-		}
-  		else{
+			  turn(13, 1, 1);
+	}
+  else{
     		ROS_INFO("The base failed to move to goal for some reason.");
-			turn(2.5, 0.5, true);
-			STOP = true;
-		}
+			  turn(13, 1, 1);
+  }
+ 
+  goal.target_pose.header.frame_id = "map";
+  goal.target_pose.header.stamp = ros::Time::now();
+  goal.target_pose.pose.position.x = 8;
+  goal.target_pose.pose.position.y = 0;
+  goal.target_pose.pose.orientation.w = 1;
+
+  ROS_INFO("Sending goal");
+  ac.sendGoal(goal,&serviceDone,&serviceActivated,&serviceFeedback);
+	ac.waitForResult();
+	if(ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED){
+   			ROS_INFO("The base moved to goal!");
+			  turn(13, 1, 1);
 	}
-	else{
-		ROS_INFO("Waiting on pose...");
+  else{
+    		ROS_INFO("The base failed to move to goal for some reason.");
+			  turn(13, 1, 1);
+  }
+
+  goal.target_pose.header.frame_id = "map";
+  goal.target_pose.header.stamp = ros::Time::now();
+  goal.target_pose.pose.position.x = 8;
+  goal.target_pose.pose.position.y = -8;
+  goal.target_pose.pose.orientation.w = 1;
+
+  ROS_INFO("Sending goal");
+  ac.sendGoal(goal,&serviceDone,&serviceActivated,&serviceFeedback);
+	ac.waitForResult();
+	if(ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED){
+   			ROS_INFO("The base moved to goal!");
+			  turn(13, 1, 1);
 	}
-	loop_rate.sleep();
-	ros::spinOnce(); 
+  else{
+    		ROS_INFO("The base failed to move to goal for some reason.");
+			  turn(13, 1, 1);
+  }
+
+  goal.target_pose.header.frame_id = "map";
+  goal.target_pose.header.stamp = ros::Time::now();
+  goal.target_pose.pose.position.x = 0;
+  goal.target_pose.pose.position.y = 8;
+  goal.target_pose.pose.orientation.w = 1;
+
+  ROS_INFO("Sending goal");
+  ac.sendGoal(goal,&serviceDone,&serviceActivated,&serviceFeedback);
+	ac.waitForResult();
+	if(ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED){
+   			ROS_INFO("The base moved to goal!");
+			  turn(13, 1, 1);
 	}
+  else{
+    		ROS_INFO("The base failed to move to goal for some reason.");
+			  turn(13, 1, 1);
+  }
+
+  goal.target_pose.header.frame_id = "map";
+  goal.target_pose.header.stamp = ros::Time::now();
+  goal.target_pose.pose.position.x = 0;
+  goal.target_pose.pose.position.y = 0;
+  goal.target_pose.pose.orientation.w = 1;
+
+  ROS_INFO("Sending goal");
+  ac.sendGoal(goal,&serviceDone,&serviceActivated,&serviceFeedback);
+	ac.waitForResult();
+	if(ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED){
+   			ROS_INFO("The base moved to goal!");
+			  turn(13, 1, 1);
+	}
+  else{
+    		ROS_INFO("The base failed to move to goal for some reason.");
+			  turn(13, 1, 1);
+  }
+
+  goal.target_pose.header.frame_id = "map";
+  goal.target_pose.header.stamp = ros::Time::now();
+  goal.target_pose.pose.position.x = 0;
+  goal.target_pose.pose.position.y = -8;
+  goal.target_pose.pose.orientation.w = 1;
+
+  ROS_INFO("Sending goal");
+  ac.sendGoal(goal,&serviceDone,&serviceActivated,&serviceFeedback);
+	ac.waitForResult();
+	if(ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED){
+   			ROS_INFO("The base moved to goal!");
+			  turn(13, 1, 1);
+	}
+  else{
+    		ROS_INFO("The base failed to move to goal for some reason.");
+			  turn(13, 1, 1);
+  }
+
+  goal.target_pose.header.frame_id = "map";
+  goal.target_pose.header.stamp = ros::Time::now();
+  goal.target_pose.pose.position.x = -8;
+  goal.target_pose.pose.position.y = 8;
+  goal.target_pose.pose.orientation.w = 1;
+
+  ROS_INFO("Sending goal");
+  ac.sendGoal(goal,&serviceDone,&serviceActivated,&serviceFeedback);
+	ac.waitForResult();
+	if(ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED){
+   			ROS_INFO("The base moved to goal!");
+			  turn(13, 1, 1);
+	}
+  else{
+    		ROS_INFO("The base failed to move to goal for some reason.");
+			  turn(13, 1, 1);
+  }
+
+  goal.target_pose.header.frame_id = "map";
+  goal.target_pose.header.stamp = ros::Time::now();
+  goal.target_pose.pose.position.x = -8;
+  goal.target_pose.pose.position.y = 0;
+  goal.target_pose.pose.orientation.w = 1;
+
+  ROS_INFO("Sending goal");
+  ac.sendGoal(goal,&serviceDone,&serviceActivated,&serviceFeedback);
+	ac.waitForResult();
+	if(ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED){
+   			ROS_INFO("The base moved to goal!");
+			  turn(13, 1, 1);
+	}
+  else{
+    		ROS_INFO("The base failed to move to goal for some reason.");
+			  turn(13, 1, 1);
+  }
+
+  goal.target_pose.header.frame_id = "map";
+  goal.target_pose.header.stamp = ros::Time::now();
+  goal.target_pose.pose.position.x = -8;
+  goal.target_pose.pose.position.y = -8;
+  goal.target_pose.pose.orientation.w = 1;
+
+  ROS_INFO("Sending goal");
+  ac.sendGoal(goal,&serviceDone,&serviceActivated,&serviceFeedback);
+	ac.waitForResult();
+	if(ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED){
+   			ROS_INFO("The base moved to goal!");
+			  turn(13, 1, 1);
+	}
+  else{
+    		ROS_INFO("The base failed to move to goal for some reason.");
+			  turn(13, 1, 1);
+  }
+
   return 0;
 }
 
+
+//Functions
 double getDistance(double x1, double y1, double x2, double y2){
 	return sqrt(pow((x1-x2), 2) + pow((y1-y2), 2));
 }
@@ -118,6 +263,27 @@ void currentPoseCallBack(const geometry_msgs::PoseWithCovarianceStamped&msg){
   currentPose.orientation.z = msg.pose.pose.orientation.z;
   currentPose.orientation.w = msg.pose.pose.orientation.w;
   return;
+}
+
+void scan360(){
+
+  ROS_INFO("Scanning goal area....");
+	geometry_msgs::Twist twist;
+	ros::Rate ratet(10);	
+	double t0 = ros::Time::now().toSec();	
+  twist.angular.z = 0.4;
+	double current_angle = 0.0;
+
+	do{
+	     vel.publish(twist);
+	     double t1 = ros::Time::now().toSec();
+       current_angle = 0.4 * (t1-t0) * 57.29;	
+	     ros::spinOnce();
+       ratet.sleep();
+	}while(current_angle < 360 && ros::ok());
+	twist.angular.z = 0;
+  vel.publish(twist);
+
 }
 
 void turn(double rel_angle, double ang_speed, bool isClockwise){

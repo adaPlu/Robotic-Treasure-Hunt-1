@@ -252,7 +252,7 @@ gtest/preinstall: gtest/gtest/preinstall
 gtest/CMakeFiles/gmock.dir/all:
 	$(MAKE) -f gtest/CMakeFiles/gmock.dir/build.make gtest/CMakeFiles/gmock.dir/depend
 	$(MAKE) -f gtest/CMakeFiles/gmock.dir/build.make gtest/CMakeFiles/gmock.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/adam/wsfinal/build/CMakeFiles --progress-num=7,8,9 "Built target gmock"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/adam/wsfinal/build/CMakeFiles --progress-num=5,6,7 "Built target gmock"
 .PHONY : gtest/CMakeFiles/gmock.dir/all
 
 # Build rule for subdir invocation for target.
@@ -284,7 +284,7 @@ clean: gtest/CMakeFiles/gmock.dir/clean
 gtest/CMakeFiles/gmock_main.dir/all:
 	$(MAKE) -f gtest/CMakeFiles/gmock_main.dir/build.make gtest/CMakeFiles/gmock_main.dir/depend
 	$(MAKE) -f gtest/CMakeFiles/gmock_main.dir/build.make gtest/CMakeFiles/gmock_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/adam/wsfinal/build/CMakeFiles --progress-num=10,11,12,13 "Built target gmock_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/adam/wsfinal/build/CMakeFiles --progress-num=8,9,10,11 "Built target gmock_main"
 .PHONY : gtest/CMakeFiles/gmock_main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -335,7 +335,7 @@ gtest/gtest/preinstall:
 gtest/gtest/CMakeFiles/gtest.dir/all:
 	$(MAKE) -f gtest/gtest/CMakeFiles/gtest.dir/build.make gtest/gtest/CMakeFiles/gtest.dir/depend
 	$(MAKE) -f gtest/gtest/CMakeFiles/gtest.dir/build.make gtest/gtest/CMakeFiles/gtest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/adam/wsfinal/build/CMakeFiles --progress-num=14,15 "Built target gtest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/adam/wsfinal/build/CMakeFiles --progress-num=12,13 "Built target gtest"
 .PHONY : gtest/gtest/CMakeFiles/gtest.dir/all
 
 # Build rule for subdir invocation for target.
@@ -367,7 +367,7 @@ clean: gtest/gtest/CMakeFiles/gtest.dir/clean
 gtest/gtest/CMakeFiles/gtest_main.dir/all: gtest/gtest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f gtest/gtest/CMakeFiles/gtest_main.dir/build.make gtest/gtest/CMakeFiles/gtest_main.dir/depend
 	$(MAKE) -f gtest/gtest/CMakeFiles/gtest_main.dir/build.make gtest/gtest/CMakeFiles/gtest_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/adam/wsfinal/build/CMakeFiles --progress-num=16,17 "Built target gtest_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/adam/wsfinal/build/CMakeFiles --progress-num=14,15 "Built target gtest_main"
 .PHONY : gtest/gtest/CMakeFiles/gtest_main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -520,7 +520,7 @@ husky-kinetic-devel/husky_msgs/CMakeFiles/husky_msgs_generate_messages_eus.dir/a
 husky-kinetic-devel/husky_msgs/CMakeFiles/husky_msgs_generate_messages_eus.dir/all: husky-kinetic-devel/husky_msgs/CMakeFiles/std_msgs_generate_messages_eus.dir/all
 	$(MAKE) -f husky-kinetic-devel/husky_msgs/CMakeFiles/husky_msgs_generate_messages_eus.dir/build.make husky-kinetic-devel/husky_msgs/CMakeFiles/husky_msgs_generate_messages_eus.dir/depend
 	$(MAKE) -f husky-kinetic-devel/husky_msgs/CMakeFiles/husky_msgs_generate_messages_eus.dir/build.make husky-kinetic-devel/husky_msgs/CMakeFiles/husky_msgs_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/adam/wsfinal/build/CMakeFiles --progress-num=29,30 "Built target husky_msgs_generate_messages_eus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/adam/wsfinal/build/CMakeFiles --progress-num=27,28 "Built target husky_msgs_generate_messages_eus"
 .PHONY : husky-kinetic-devel/husky_msgs/CMakeFiles/husky_msgs_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
@@ -617,7 +617,7 @@ husky-kinetic-devel/husky_msgs/CMakeFiles/husky_msgs_generate_messages_cpp.dir/a
 husky-kinetic-devel/husky_msgs/CMakeFiles/husky_msgs_generate_messages_cpp.dir/all: husky-kinetic-devel/husky_msgs/CMakeFiles/_husky_msgs_generate_messages_check_deps_HuskyStatus.dir/all
 	$(MAKE) -f husky-kinetic-devel/husky_msgs/CMakeFiles/husky_msgs_generate_messages_cpp.dir/build.make husky-kinetic-devel/husky_msgs/CMakeFiles/husky_msgs_generate_messages_cpp.dir/depend
 	$(MAKE) -f husky-kinetic-devel/husky_msgs/CMakeFiles/husky_msgs_generate_messages_cpp.dir/build.make husky-kinetic-devel/husky_msgs/CMakeFiles/husky_msgs_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/adam/wsfinal/build/CMakeFiles --progress-num=28 "Built target husky_msgs_generate_messages_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/adam/wsfinal/build/CMakeFiles --progress-num=26 "Built target husky_msgs_generate_messages_cpp"
 .PHONY : husky-kinetic-devel/husky_msgs/CMakeFiles/husky_msgs_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
@@ -947,7 +947,7 @@ husky-kinetic-devel/husky_msgs/CMakeFiles/husky_msgs_generate_messages_lisp.dir/
 husky-kinetic-devel/husky_msgs/CMakeFiles/husky_msgs_generate_messages_lisp.dir/all: husky-kinetic-devel/husky_msgs/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
 	$(MAKE) -f husky-kinetic-devel/husky_msgs/CMakeFiles/husky_msgs_generate_messages_lisp.dir/build.make husky-kinetic-devel/husky_msgs/CMakeFiles/husky_msgs_generate_messages_lisp.dir/depend
 	$(MAKE) -f husky-kinetic-devel/husky_msgs/CMakeFiles/husky_msgs_generate_messages_lisp.dir/build.make husky-kinetic-devel/husky_msgs/CMakeFiles/husky_msgs_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/adam/wsfinal/build/CMakeFiles --progress-num=31 "Built target husky_msgs_generate_messages_lisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/adam/wsfinal/build/CMakeFiles --progress-num=29 "Built target husky_msgs_generate_messages_lisp"
 .PHONY : husky-kinetic-devel/husky_msgs/CMakeFiles/husky_msgs_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
@@ -980,7 +980,7 @@ husky-kinetic-devel/husky_msgs/CMakeFiles/husky_msgs_generate_messages_nodejs.di
 husky-kinetic-devel/husky_msgs/CMakeFiles/husky_msgs_generate_messages_nodejs.dir/all: husky-kinetic-devel/husky_msgs/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
 	$(MAKE) -f husky-kinetic-devel/husky_msgs/CMakeFiles/husky_msgs_generate_messages_nodejs.dir/build.make husky-kinetic-devel/husky_msgs/CMakeFiles/husky_msgs_generate_messages_nodejs.dir/depend
 	$(MAKE) -f husky-kinetic-devel/husky_msgs/CMakeFiles/husky_msgs_generate_messages_nodejs.dir/build.make husky-kinetic-devel/husky_msgs/CMakeFiles/husky_msgs_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/adam/wsfinal/build/CMakeFiles --progress-num=32 "Built target husky_msgs_generate_messages_nodejs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/adam/wsfinal/build/CMakeFiles --progress-num=30 "Built target husky_msgs_generate_messages_nodejs"
 .PHONY : husky-kinetic-devel/husky_msgs/CMakeFiles/husky_msgs_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1045,7 +1045,7 @@ husky-kinetic-devel/husky_msgs/CMakeFiles/husky_msgs_generate_messages_py.dir/al
 husky-kinetic-devel/husky_msgs/CMakeFiles/husky_msgs_generate_messages_py.dir/all: husky-kinetic-devel/husky_msgs/CMakeFiles/_husky_msgs_generate_messages_check_deps_HuskyStatus.dir/all
 	$(MAKE) -f husky-kinetic-devel/husky_msgs/CMakeFiles/husky_msgs_generate_messages_py.dir/build.make husky-kinetic-devel/husky_msgs/CMakeFiles/husky_msgs_generate_messages_py.dir/depend
 	$(MAKE) -f husky-kinetic-devel/husky_msgs/CMakeFiles/husky_msgs_generate_messages_py.dir/build.make husky-kinetic-devel/husky_msgs/CMakeFiles/husky_msgs_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/adam/wsfinal/build/CMakeFiles --progress-num=33,34 "Built target husky_msgs_generate_messages_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/adam/wsfinal/build/CMakeFiles --progress-num=31,32 "Built target husky_msgs_generate_messages_py"
 .PHONY : husky-kinetic-devel/husky_msgs/CMakeFiles/husky_msgs_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2096,7 +2096,7 @@ clean: husky-kinetic-devel/husky_base/CMakeFiles/geometry_msgs_generate_messages
 husky-kinetic-devel/husky_base/CMakeFiles/horizon_legacy.dir/all:
 	$(MAKE) -f husky-kinetic-devel/husky_base/CMakeFiles/horizon_legacy.dir/build.make husky-kinetic-devel/husky_base/CMakeFiles/horizon_legacy.dir/depend
 	$(MAKE) -f husky-kinetic-devel/husky_base/CMakeFiles/horizon_legacy.dir/build.make husky-kinetic-devel/husky_base/CMakeFiles/horizon_legacy.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/adam/wsfinal/build/CMakeFiles --progress-num=18,19,20,21,22,23,24,25,26,27 "Built target horizon_legacy"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/adam/wsfinal/build/CMakeFiles --progress-num=16,17,18,19,20,21,22,23,24,25 "Built target horizon_legacy"
 .PHONY : husky-kinetic-devel/husky_base/CMakeFiles/horizon_legacy.dir/all
 
 # Include target in all.
@@ -2133,7 +2133,7 @@ clean: husky-kinetic-devel/husky_base/CMakeFiles/horizon_legacy.dir/clean
 husky-kinetic-devel/husky_base/CMakeFiles/husky_node.dir/all: husky-kinetic-devel/husky_base/CMakeFiles/horizon_legacy.dir/all
 	$(MAKE) -f husky-kinetic-devel/husky_base/CMakeFiles/husky_node.dir/build.make husky-kinetic-devel/husky_base/CMakeFiles/husky_node.dir/depend
 	$(MAKE) -f husky-kinetic-devel/husky_base/CMakeFiles/husky_node.dir/build.make husky-kinetic-devel/husky_base/CMakeFiles/husky_node.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/adam/wsfinal/build/CMakeFiles --progress-num=35,36,37,38,39 "Built target husky_node"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/adam/wsfinal/build/CMakeFiles --progress-num=33,34,35,36,37 "Built target husky_node"
 .PHONY : husky-kinetic-devel/husky_base/CMakeFiles/husky_node.dir/all
 
 # Include target in all.
@@ -4129,7 +4129,7 @@ logical_camera_plugin/CMakeFiles/logical_camera_plugin.dir/all: logical_camera_p
 logical_camera_plugin/CMakeFiles/logical_camera_plugin.dir/all: logical_camera_plugin/CMakeFiles/actionlib_generate_messages_nodejs.dir/all
 	$(MAKE) -f logical_camera_plugin/CMakeFiles/logical_camera_plugin.dir/build.make logical_camera_plugin/CMakeFiles/logical_camera_plugin.dir/depend
 	$(MAKE) -f logical_camera_plugin/CMakeFiles/logical_camera_plugin.dir/build.make logical_camera_plugin/CMakeFiles/logical_camera_plugin.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/adam/wsfinal/build/CMakeFiles --progress-num=40,41 "Built target logical_camera_plugin"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/adam/wsfinal/build/CMakeFiles --progress-num=38,39 "Built target logical_camera_plugin"
 .PHONY : logical_camera_plugin/CMakeFiles/logical_camera_plugin.dir/all
 
 # Include target in all.
@@ -4167,7 +4167,7 @@ logical_camera_plugin/CMakeFiles/logical_camera_plugin_generate_messages_nodejs.
 logical_camera_plugin/CMakeFiles/logical_camera_plugin_generate_messages_nodejs.dir/all: logical_camera_plugin/CMakeFiles/_logical_camera_plugin_generate_messages_check_deps_logicalImage.dir/all
 	$(MAKE) -f logical_camera_plugin/CMakeFiles/logical_camera_plugin_generate_messages_nodejs.dir/build.make logical_camera_plugin/CMakeFiles/logical_camera_plugin_generate_messages_nodejs.dir/depend
 	$(MAKE) -f logical_camera_plugin/CMakeFiles/logical_camera_plugin_generate_messages_nodejs.dir/build.make logical_camera_plugin/CMakeFiles/logical_camera_plugin_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/adam/wsfinal/build/CMakeFiles --progress-num=46 "Built target logical_camera_plugin_generate_messages_nodejs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/adam/wsfinal/build/CMakeFiles --progress-num=44 "Built target logical_camera_plugin_generate_messages_nodejs"
 .PHONY : logical_camera_plugin/CMakeFiles/logical_camera_plugin_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
@@ -4200,7 +4200,7 @@ logical_camera_plugin/CMakeFiles/logical_camera_plugin_generate_messages_lisp.di
 logical_camera_plugin/CMakeFiles/logical_camera_plugin_generate_messages_lisp.dir/all: logical_camera_plugin/CMakeFiles/_logical_camera_plugin_generate_messages_check_deps_logicalImage.dir/all
 	$(MAKE) -f logical_camera_plugin/CMakeFiles/logical_camera_plugin_generate_messages_lisp.dir/build.make logical_camera_plugin/CMakeFiles/logical_camera_plugin_generate_messages_lisp.dir/depend
 	$(MAKE) -f logical_camera_plugin/CMakeFiles/logical_camera_plugin_generate_messages_lisp.dir/build.make logical_camera_plugin/CMakeFiles/logical_camera_plugin_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/adam/wsfinal/build/CMakeFiles --progress-num=45 "Built target logical_camera_plugin_generate_messages_lisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/adam/wsfinal/build/CMakeFiles --progress-num=43 "Built target logical_camera_plugin_generate_messages_lisp"
 .PHONY : logical_camera_plugin/CMakeFiles/logical_camera_plugin_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
@@ -4265,7 +4265,7 @@ logical_camera_plugin/CMakeFiles/logical_camera_plugin_generate_messages_cpp.dir
 logical_camera_plugin/CMakeFiles/logical_camera_plugin_generate_messages_cpp.dir/all: logical_camera_plugin/CMakeFiles/_logical_camera_plugin_generate_messages_check_deps_logicalImage.dir/all
 	$(MAKE) -f logical_camera_plugin/CMakeFiles/logical_camera_plugin_generate_messages_cpp.dir/build.make logical_camera_plugin/CMakeFiles/logical_camera_plugin_generate_messages_cpp.dir/depend
 	$(MAKE) -f logical_camera_plugin/CMakeFiles/logical_camera_plugin_generate_messages_cpp.dir/build.make logical_camera_plugin/CMakeFiles/logical_camera_plugin_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/adam/wsfinal/build/CMakeFiles --progress-num=42 "Built target logical_camera_plugin_generate_messages_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/adam/wsfinal/build/CMakeFiles --progress-num=40 "Built target logical_camera_plugin_generate_messages_cpp"
 .PHONY : logical_camera_plugin/CMakeFiles/logical_camera_plugin_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
@@ -4563,7 +4563,7 @@ logical_camera_plugin/CMakeFiles/logical_camera_plugin_generate_messages_py.dir/
 logical_camera_plugin/CMakeFiles/logical_camera_plugin_generate_messages_py.dir/all: logical_camera_plugin/CMakeFiles/_logical_camera_plugin_generate_messages_check_deps_logicalImage.dir/all
 	$(MAKE) -f logical_camera_plugin/CMakeFiles/logical_camera_plugin_generate_messages_py.dir/build.make logical_camera_plugin/CMakeFiles/logical_camera_plugin_generate_messages_py.dir/depend
 	$(MAKE) -f logical_camera_plugin/CMakeFiles/logical_camera_plugin_generate_messages_py.dir/build.make logical_camera_plugin/CMakeFiles/logical_camera_plugin_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/adam/wsfinal/build/CMakeFiles --progress-num=47,48 "Built target logical_camera_plugin_generate_messages_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/adam/wsfinal/build/CMakeFiles --progress-num=45,46 "Built target logical_camera_plugin_generate_messages_py"
 .PHONY : logical_camera_plugin/CMakeFiles/logical_camera_plugin_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
@@ -4692,7 +4692,7 @@ logical_camera_plugin/CMakeFiles/logical_camera_plugin_generate_messages_eus.dir
 logical_camera_plugin/CMakeFiles/logical_camera_plugin_generate_messages_eus.dir/all: logical_camera_plugin/CMakeFiles/_logical_camera_plugin_generate_messages_check_deps_logicalImage.dir/all
 	$(MAKE) -f logical_camera_plugin/CMakeFiles/logical_camera_plugin_generate_messages_eus.dir/build.make logical_camera_plugin/CMakeFiles/logical_camera_plugin_generate_messages_eus.dir/depend
 	$(MAKE) -f logical_camera_plugin/CMakeFiles/logical_camera_plugin_generate_messages_eus.dir/build.make logical_camera_plugin/CMakeFiles/logical_camera_plugin_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/adam/wsfinal/build/CMakeFiles --progress-num=43,44 "Built target logical_camera_plugin_generate_messages_eus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/adam/wsfinal/build/CMakeFiles --progress-num=41,42 "Built target logical_camera_plugin_generate_messages_eus"
 .PHONY : logical_camera_plugin/CMakeFiles/logical_camera_plugin_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
@@ -6417,20 +6417,18 @@ clean: logical_camera_plugin/CMakeFiles/actionlib_generate_messages_nodejs.dir/c
 # Directory level rules for directory scavenger_hunt
 
 # Convenience name for "all" pass in the directory.
-scavenger_hunt/all: scavenger_hunt/CMakeFiles/moveMap.dir/all
-scavenger_hunt/all: scavenger_hunt/CMakeFiles/treasurelocator.dir/all
-scavenger_hunt/all: scavenger_hunt/CMakeFiles/getpose.dir/all
-scavenger_hunt/all: scavenger_hunt/CMakeFiles/globalCostMap.dir/all
 scavenger_hunt/all: scavenger_hunt/CMakeFiles/currentPos.dir/all
+scavenger_hunt/all: scavenger_hunt/CMakeFiles/moveMap.dir/all
+scavenger_hunt/all: scavenger_hunt/CMakeFiles/getpose.dir/all
+scavenger_hunt/all: scavenger_hunt/CMakeFiles/treasurelocator.dir/all
 
 .PHONY : scavenger_hunt/all
 
 # Convenience name for "clean" pass in the directory.
-scavenger_hunt/clean: scavenger_hunt/CMakeFiles/moveMap.dir/clean
-scavenger_hunt/clean: scavenger_hunt/CMakeFiles/treasurelocator.dir/clean
-scavenger_hunt/clean: scavenger_hunt/CMakeFiles/getpose.dir/clean
-scavenger_hunt/clean: scavenger_hunt/CMakeFiles/globalCostMap.dir/clean
 scavenger_hunt/clean: scavenger_hunt/CMakeFiles/currentPos.dir/clean
+scavenger_hunt/clean: scavenger_hunt/CMakeFiles/moveMap.dir/clean
+scavenger_hunt/clean: scavenger_hunt/CMakeFiles/getpose.dir/clean
+scavenger_hunt/clean: scavenger_hunt/CMakeFiles/treasurelocator.dir/clean
 
 .PHONY : scavenger_hunt/clean
 
@@ -6440,13 +6438,50 @@ scavenger_hunt/preinstall:
 .PHONY : scavenger_hunt/preinstall
 
 #=============================================================================
+# Target rules for target scavenger_hunt/CMakeFiles/currentPos.dir
+
+# All Build rule for target.
+scavenger_hunt/CMakeFiles/currentPos.dir/all:
+	$(MAKE) -f scavenger_hunt/CMakeFiles/currentPos.dir/build.make scavenger_hunt/CMakeFiles/currentPos.dir/depend
+	$(MAKE) -f scavenger_hunt/CMakeFiles/currentPos.dir/build.make scavenger_hunt/CMakeFiles/currentPos.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/adam/wsfinal/build/CMakeFiles --progress-num=1,2 "Built target currentPos"
+.PHONY : scavenger_hunt/CMakeFiles/currentPos.dir/all
+
+# Include target in all.
+all: scavenger_hunt/CMakeFiles/currentPos.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+scavenger_hunt/CMakeFiles/currentPos.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/adam/wsfinal/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 scavenger_hunt/CMakeFiles/currentPos.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/adam/wsfinal/build/CMakeFiles 0
+.PHONY : scavenger_hunt/CMakeFiles/currentPos.dir/rule
+
+# Convenience name for target.
+currentPos: scavenger_hunt/CMakeFiles/currentPos.dir/rule
+
+.PHONY : currentPos
+
+# clean rule for target.
+scavenger_hunt/CMakeFiles/currentPos.dir/clean:
+	$(MAKE) -f scavenger_hunt/CMakeFiles/currentPos.dir/build.make scavenger_hunt/CMakeFiles/currentPos.dir/clean
+.PHONY : scavenger_hunt/CMakeFiles/currentPos.dir/clean
+
+# clean rule for target.
+clean: scavenger_hunt/CMakeFiles/currentPos.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
 # Target rules for target scavenger_hunt/CMakeFiles/moveMap.dir
 
 # All Build rule for target.
 scavenger_hunt/CMakeFiles/moveMap.dir/all:
 	$(MAKE) -f scavenger_hunt/CMakeFiles/moveMap.dir/build.make scavenger_hunt/CMakeFiles/moveMap.dir/depend
 	$(MAKE) -f scavenger_hunt/CMakeFiles/moveMap.dir/build.make scavenger_hunt/CMakeFiles/moveMap.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/adam/wsfinal/build/CMakeFiles --progress-num=49,50 "Built target moveMap"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/adam/wsfinal/build/CMakeFiles --progress-num=47,48 "Built target moveMap"
 .PHONY : scavenger_hunt/CMakeFiles/moveMap.dir/all
 
 # Include target in all.
@@ -6473,43 +6508,6 @@ scavenger_hunt/CMakeFiles/moveMap.dir/clean:
 
 # clean rule for target.
 clean: scavenger_hunt/CMakeFiles/moveMap.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target scavenger_hunt/CMakeFiles/treasurelocator.dir
-
-# All Build rule for target.
-scavenger_hunt/CMakeFiles/treasurelocator.dir/all:
-	$(MAKE) -f scavenger_hunt/CMakeFiles/treasurelocator.dir/build.make scavenger_hunt/CMakeFiles/treasurelocator.dir/depend
-	$(MAKE) -f scavenger_hunt/CMakeFiles/treasurelocator.dir/build.make scavenger_hunt/CMakeFiles/treasurelocator.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/adam/wsfinal/build/CMakeFiles --progress-num=51,52 "Built target treasurelocator"
-.PHONY : scavenger_hunt/CMakeFiles/treasurelocator.dir/all
-
-# Include target in all.
-all: scavenger_hunt/CMakeFiles/treasurelocator.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-scavenger_hunt/CMakeFiles/treasurelocator.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/adam/wsfinal/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 scavenger_hunt/CMakeFiles/treasurelocator.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/adam/wsfinal/build/CMakeFiles 0
-.PHONY : scavenger_hunt/CMakeFiles/treasurelocator.dir/rule
-
-# Convenience name for target.
-treasurelocator: scavenger_hunt/CMakeFiles/treasurelocator.dir/rule
-
-.PHONY : treasurelocator
-
-# clean rule for target.
-scavenger_hunt/CMakeFiles/treasurelocator.dir/clean:
-	$(MAKE) -f scavenger_hunt/CMakeFiles/treasurelocator.dir/build.make scavenger_hunt/CMakeFiles/treasurelocator.dir/clean
-.PHONY : scavenger_hunt/CMakeFiles/treasurelocator.dir/clean
-
-# clean rule for target.
-clean: scavenger_hunt/CMakeFiles/treasurelocator.dir/clean
 
 .PHONY : clean
 
@@ -6551,76 +6549,39 @@ clean: scavenger_hunt/CMakeFiles/getpose.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target scavenger_hunt/CMakeFiles/globalCostMap.dir
+# Target rules for target scavenger_hunt/CMakeFiles/treasurelocator.dir
 
 # All Build rule for target.
-scavenger_hunt/CMakeFiles/globalCostMap.dir/all:
-	$(MAKE) -f scavenger_hunt/CMakeFiles/globalCostMap.dir/build.make scavenger_hunt/CMakeFiles/globalCostMap.dir/depend
-	$(MAKE) -f scavenger_hunt/CMakeFiles/globalCostMap.dir/build.make scavenger_hunt/CMakeFiles/globalCostMap.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/adam/wsfinal/build/CMakeFiles --progress-num=5,6 "Built target globalCostMap"
-.PHONY : scavenger_hunt/CMakeFiles/globalCostMap.dir/all
+scavenger_hunt/CMakeFiles/treasurelocator.dir/all:
+	$(MAKE) -f scavenger_hunt/CMakeFiles/treasurelocator.dir/build.make scavenger_hunt/CMakeFiles/treasurelocator.dir/depend
+	$(MAKE) -f scavenger_hunt/CMakeFiles/treasurelocator.dir/build.make scavenger_hunt/CMakeFiles/treasurelocator.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/adam/wsfinal/build/CMakeFiles --progress-num=49,50 "Built target treasurelocator"
+.PHONY : scavenger_hunt/CMakeFiles/treasurelocator.dir/all
 
 # Include target in all.
-all: scavenger_hunt/CMakeFiles/globalCostMap.dir/all
+all: scavenger_hunt/CMakeFiles/treasurelocator.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-scavenger_hunt/CMakeFiles/globalCostMap.dir/rule: cmake_check_build_system
+scavenger_hunt/CMakeFiles/treasurelocator.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/adam/wsfinal/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 scavenger_hunt/CMakeFiles/globalCostMap.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 scavenger_hunt/CMakeFiles/treasurelocator.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/adam/wsfinal/build/CMakeFiles 0
-.PHONY : scavenger_hunt/CMakeFiles/globalCostMap.dir/rule
+.PHONY : scavenger_hunt/CMakeFiles/treasurelocator.dir/rule
 
 # Convenience name for target.
-globalCostMap: scavenger_hunt/CMakeFiles/globalCostMap.dir/rule
+treasurelocator: scavenger_hunt/CMakeFiles/treasurelocator.dir/rule
 
-.PHONY : globalCostMap
-
-# clean rule for target.
-scavenger_hunt/CMakeFiles/globalCostMap.dir/clean:
-	$(MAKE) -f scavenger_hunt/CMakeFiles/globalCostMap.dir/build.make scavenger_hunt/CMakeFiles/globalCostMap.dir/clean
-.PHONY : scavenger_hunt/CMakeFiles/globalCostMap.dir/clean
+.PHONY : treasurelocator
 
 # clean rule for target.
-clean: scavenger_hunt/CMakeFiles/globalCostMap.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target scavenger_hunt/CMakeFiles/currentPos.dir
-
-# All Build rule for target.
-scavenger_hunt/CMakeFiles/currentPos.dir/all:
-	$(MAKE) -f scavenger_hunt/CMakeFiles/currentPos.dir/build.make scavenger_hunt/CMakeFiles/currentPos.dir/depend
-	$(MAKE) -f scavenger_hunt/CMakeFiles/currentPos.dir/build.make scavenger_hunt/CMakeFiles/currentPos.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/adam/wsfinal/build/CMakeFiles --progress-num=1,2 "Built target currentPos"
-.PHONY : scavenger_hunt/CMakeFiles/currentPos.dir/all
-
-# Include target in all.
-all: scavenger_hunt/CMakeFiles/currentPos.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-scavenger_hunt/CMakeFiles/currentPos.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/adam/wsfinal/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 scavenger_hunt/CMakeFiles/currentPos.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/adam/wsfinal/build/CMakeFiles 0
-.PHONY : scavenger_hunt/CMakeFiles/currentPos.dir/rule
-
-# Convenience name for target.
-currentPos: scavenger_hunt/CMakeFiles/currentPos.dir/rule
-
-.PHONY : currentPos
+scavenger_hunt/CMakeFiles/treasurelocator.dir/clean:
+	$(MAKE) -f scavenger_hunt/CMakeFiles/treasurelocator.dir/build.make scavenger_hunt/CMakeFiles/treasurelocator.dir/clean
+.PHONY : scavenger_hunt/CMakeFiles/treasurelocator.dir/clean
 
 # clean rule for target.
-scavenger_hunt/CMakeFiles/currentPos.dir/clean:
-	$(MAKE) -f scavenger_hunt/CMakeFiles/currentPos.dir/build.make scavenger_hunt/CMakeFiles/currentPos.dir/clean
-.PHONY : scavenger_hunt/CMakeFiles/currentPos.dir/clean
-
-# clean rule for target.
-clean: scavenger_hunt/CMakeFiles/currentPos.dir/clean
+clean: scavenger_hunt/CMakeFiles/treasurelocator.dir/clean
 
 .PHONY : clean
 

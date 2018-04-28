@@ -6,61 +6,50 @@
 #include <geometry_msgs/Quaternion.h>
 #include <angles/angles.h>
 #include <tf/transform_datatypes.h>
-#include <nav_msgs/OccupancyGrid.h>
+#include <tf/tf.h>
 
+//vector holding names of treasure
 std::vector<std::string> treasureNames;
 
-//amcl value to know pose and Orientation
+//amcl values to know pose and orientation
 float robotX, robotY, robotZ;
 geometry_msgs::Quaternion robotOrientation;
 
 void printCoordinatesName(std::string name, float x, float y, float z, geometry_msgs::Quaternion ori){
 
-	//getting angle from z rotation
-	double treAngle = tf::getYaw(ori);
+	tf::Quaternion Brot;
+	tf::quaternionMsgToTF(robotOrientation, Brot);
+	tf::Matrix3x3 BrotA(Brot);
 
-	//makes angle be from 0 to 2*M_PI
-	treAngle = angles::normalize_angle_positive(treAngle);
+	tf::Vector3 Col0 = BrotA.getColumn(0);
+	tf::Vector3 Col1 = BrotA.getColumn(1);
+	tf::Vector3 Col2 = BrotA.getColumn(2);
 
-	double degree = treAngle*180/M_PI;
+	float xx, xy, xz;
+	float yx, yy, yz;
+	float zx, zy, zz;
 
-	if((degree >= 0) && (degree < 90)){
-		x = x - robotX;
-		y = y - robotY;
-	}
+	xx = Col0.getX(); xy = Col1.getX(); xz = Col2.getX();
+	yx = Col0.getY(); yy = Col1.getY(); yz = Col2.getY();
+	zx = Col0.getZ(); zy = Col1.getZ(); zz = Col2.getZ();
 
-	else if((degree >= 90) && (degree < 180)){
-		x = x + robotX;
-		y = y - robotY;
-	}
-
-	else if((degree >= 180) && (degree < 270)){
-		x = x + robotX;
-		y = y + robotY;
-	}
-
-	else{
-		x = x - robotX;
-		y = y + robotY;
-	}
+	float ApX = (x*xx + y*xy + z*xz) + robotX;
+	float ApY = (x*yx + y*yy + z*yz) + robotY;
+	float ApZ = (x*zx + y*zy + z*zz) + robotZ;
 
 	ROS_INFO_STREAM("Name: " << name);
-	ROS_INFO_STREAM("X location: " << x);
-	ROS_INFO_STREAM("Y location: " << y);
-	ROS_INFO_STREAM("Z location: " << z);
-	ROS_INFO_STREAM("Orientation: " << degree);
-
+	ROS_INFO_STREAM("X location: " << ApX);
+	ROS_INFO_STREAM("Y location: " << ApY);
+	ROS_INFO_STREAM("Z location: " << ApZ);
 }
 
+//amcl_pose getting the location of the gazebo in the map
 void Location(const geometry_msgs::PoseWithCovarianceStamped &msg){
 
 	robotX = msg.pose.pose.position.x;
 	robotY = msg.pose.pose.position.y;
 	robotZ = msg.pose.pose.position.z;
 	robotOrientation = msg.pose.pose.orientation;
-
-	//ROS_INFO_STREAM(msg.pose.pose.position);
-	//ROS_INFO_STREAM(msg.pose.pose.orientation);
 }
 
 void LogicalCameraMessage(const logical_camera_plugin::logicalImage &msg){
@@ -78,6 +67,9 @@ void LogicalCameraMessage(const logical_camera_plugin::logicalImage &msg){
 	quat.z = msg.pose_rot_z;
 	quat.w = msg.pose_rot_w;
 
+	//if the vector was initially empty then we place
+	//it in the vector and print the coordinates
+
 	if(treasureNames.empty()){
 
 		treasureNames.insert(treasureNames.begin(), foundTreasure);
@@ -88,6 +80,7 @@ void LogicalCameraMessage(const logical_camera_plugin::logicalImage &msg){
 		int vecsize = treasureNames.size();
 		bool found = false;
 
+	//going through the vector to see if the treasure has already been found
 		for(int i=0; i < vecsize; i++){
 
 			std::string knownTreasure = treasureNames.at(i);
@@ -98,6 +91,9 @@ void LogicalCameraMessage(const logical_camera_plugin::logicalImage &msg){
 				break;
 			}
 		}
+
+	//checking to see if the name was found in the vector if it wasent
+	//then we put it in the vector and print the name and coordinates
 
 		if(found == false){
 

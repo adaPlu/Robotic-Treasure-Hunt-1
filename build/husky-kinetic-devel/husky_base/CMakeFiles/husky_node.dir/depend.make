@@ -122,11 +122,12 @@ husky-kinetic-devel/husky_base/CMakeFiles/husky_node.dir/src/husky_base.cpp.o: /
 husky-kinetic-devel/husky_base/CMakeFiles/husky_node.dir/src/husky_base.cpp.o: /opt/ros/kinetic/include/hardware_interface/joint_command_interface.h
 husky-kinetic-devel/husky_base/CMakeFiles/husky_node.dir/src/husky_base.cpp.o: /opt/ros/kinetic/include/hardware_interface/joint_state_interface.h
 husky-kinetic-devel/husky_base/CMakeFiles/husky_node.dir/src/husky_base.cpp.o: /opt/ros/kinetic/include/hardware_interface/robot_hw.h
-husky-kinetic-devel/husky_base/CMakeFiles/husky_node.dir/src/husky_base.cpp.o: /opt/ros/kinetic/include/pluginlib/class_desc.h
-husky-kinetic-devel/husky_base/CMakeFiles/husky_node.dir/src/husky_base.cpp.o: /opt/ros/kinetic/include/pluginlib/class_loader.h
-husky-kinetic-devel/husky_base/CMakeFiles/husky_node.dir/src/husky_base.cpp.o: /opt/ros/kinetic/include/pluginlib/class_loader_base.h
-husky-kinetic-devel/husky_base/CMakeFiles/husky_node.dir/src/husky_base.cpp.o: /opt/ros/kinetic/include/pluginlib/class_loader_imp.h
-husky-kinetic-devel/husky_base/CMakeFiles/husky_node.dir/src/husky_base.cpp.o: /opt/ros/kinetic/include/pluginlib/pluginlib_exceptions.h
+husky-kinetic-devel/husky_base/CMakeFiles/husky_node.dir/src/husky_base.cpp.o: /opt/ros/kinetic/include/pluginlib/././class_loader.hpp
+husky-kinetic-devel/husky_base/CMakeFiles/husky_node.dir/src/husky_base.cpp.o: /opt/ros/kinetic/include/pluginlib/./class_loader_imp.hpp
+husky-kinetic-devel/husky_base/CMakeFiles/husky_node.dir/src/husky_base.cpp.o: /opt/ros/kinetic/include/pluginlib/class_desc.hpp
+husky-kinetic-devel/husky_base/CMakeFiles/husky_node.dir/src/husky_base.cpp.o: /opt/ros/kinetic/include/pluginlib/class_loader.hpp
+husky-kinetic-devel/husky_base/CMakeFiles/husky_node.dir/src/husky_base.cpp.o: /opt/ros/kinetic/include/pluginlib/class_loader_base.hpp
+husky-kinetic-devel/husky_base/CMakeFiles/husky_node.dir/src/husky_base.cpp.o: /opt/ros/kinetic/include/pluginlib/exceptions.hpp
 husky-kinetic-devel/husky_base/CMakeFiles/husky_node.dir/src/husky_base.cpp.o: /opt/ros/kinetic/include/realtime_tools/realtime_publisher.h
 husky-kinetic-devel/husky_base/CMakeFiles/husky_node.dir/src/husky_base.cpp.o: /opt/ros/kinetic/include/ros/advertise_options.h
 husky-kinetic-devel/husky_base/CMakeFiles/husky_node.dir/src/husky_base.cpp.o: /opt/ros/kinetic/include/ros/advertise_service_options.h
