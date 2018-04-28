@@ -136,7 +136,6 @@ include_directories(
 # add_executable(scavenger_hunt_node src/scavenger_hunt_node.cpp)
 add_executable(treasurelocator src/treasurelocator.cpp)
 add_executable(moveMap src/moveMap.cpp)
-add_executable(getpose src/getpose.cpp)
 add_executable(currentPos src/currentPos.cpp)
 ## Add cmake target dependencies of the executable
 ## same as for the library above
@@ -150,7 +149,6 @@ add_executable(currentPos src/currentPos.cpp)
 target_link_libraries(treasurelocator ${catkin_LIBRARIES})
 target_link_libraries(moveMap ${catkin_LIBRARIES})
 target_link_libraries(currentPos ${catkin_LIBRARIES})
-target_link_libraries(getpose ${catkin_LIBRARIES})
 #############
 ## Install ##
 #############
