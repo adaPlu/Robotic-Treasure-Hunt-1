@@ -3,7 +3,8 @@
 Adam Pluguez
 UC Merced CSE 180 Robotics
 Final Project
-Uses Move base to move to receieved point. Will be configured to go to 9 fixed map points then rotate 360 degrees in an attempt to locate any nearby treasures.*/
+Uses Move base to move to receieved point. Configured to go to 10 fixed map points then rotate 360 degrees in an attempt to locate any nearby treasures.
+Will be increased to 16 points, may remove 360 rotation depending on path chosen coverage*/
 #include <ros/ros.h>
 #include <move_base_msgs/MoveBaseAction.h>
 #include <actionlib/client/simple_action_client.h>
@@ -301,6 +302,7 @@ void scan360(){
 }
 
 void turn(double rel_angle, double ang_speed, bool isClockwise){
+    ROS_INFO("Scanning goal area....");
 	geometry_msgs::Twist twist;
 
 	if(isClockwise)
