@@ -17,6 +17,7 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "/home/adam/wsfinal/src/scavenger_hunt/include"
   "/home/adam/wsfinal/devel/include"
   "/home/adam/wsfinal/src/logical_camera_plugin/include"
   "/opt/ros/kinetic/include"

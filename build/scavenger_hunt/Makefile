@@ -78,17 +78,6 @@ install/fast: preinstall/fast
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # Special rule for the target test
 test:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
@@ -99,6 +88,17 @@ test:
 test/fast: test
 
 .PHONY : test/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # Special rule for the target rebuild_cache
 rebuild_cache:
@@ -166,6 +166,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+scavenger_hunt/CMakeFiles/gototreasure.dir/rule:
+	cd /home/adam/wsfinal/build && $(MAKE) -f CMakeFiles/Makefile2 scavenger_hunt/CMakeFiles/gototreasure.dir/rule
+.PHONY : scavenger_hunt/CMakeFiles/gototreasure.dir/rule
+
+# Convenience name for target.
+gototreasure: scavenger_hunt/CMakeFiles/gototreasure.dir/rule
+
+.PHONY : gototreasure
+
+# fast build rule for target.
+gototreasure/fast:
+	cd /home/adam/wsfinal/build && $(MAKE) -f scavenger_hunt/CMakeFiles/gototreasure.dir/build.make scavenger_hunt/CMakeFiles/gototreasure.dir/build
+.PHONY : gototreasure/fast
+
+# Convenience name for target.
 scavenger_hunt/CMakeFiles/currentPos.dir/rule:
 	cd /home/adam/wsfinal/build && $(MAKE) -f CMakeFiles/Makefile2 scavenger_hunt/CMakeFiles/currentPos.dir/rule
 .PHONY : scavenger_hunt/CMakeFiles/currentPos.dir/rule
@@ -195,21 +210,6 @@ treasurelocator/fast:
 	cd /home/adam/wsfinal/build && $(MAKE) -f scavenger_hunt/CMakeFiles/treasurelocator.dir/build.make scavenger_hunt/CMakeFiles/treasurelocator.dir/build
 .PHONY : treasurelocator/fast
 
-# Convenience name for target.
-scavenger_hunt/CMakeFiles/moveMap.dir/rule:
-	cd /home/adam/wsfinal/build && $(MAKE) -f CMakeFiles/Makefile2 scavenger_hunt/CMakeFiles/moveMap.dir/rule
-.PHONY : scavenger_hunt/CMakeFiles/moveMap.dir/rule
-
-# Convenience name for target.
-moveMap: scavenger_hunt/CMakeFiles/moveMap.dir/rule
-
-.PHONY : moveMap
-
-# fast build rule for target.
-moveMap/fast:
-	cd /home/adam/wsfinal/build && $(MAKE) -f scavenger_hunt/CMakeFiles/moveMap.dir/build.make scavenger_hunt/CMakeFiles/moveMap.dir/build
-.PHONY : moveMap/fast
-
 src/currentPos.o: src/currentPos.cpp.o
 
 .PHONY : src/currentPos.o
@@ -237,32 +237,32 @@ src/currentPos.cpp.s:
 	cd /home/adam/wsfinal/build && $(MAKE) -f scavenger_hunt/CMakeFiles/currentPos.dir/build.make scavenger_hunt/CMakeFiles/currentPos.dir/src/currentPos.cpp.s
 .PHONY : src/currentPos.cpp.s
 
-src/moveMap.o: src/moveMap.cpp.o
+src/gototreasure.o: src/gototreasure.cpp.o
 
-.PHONY : src/moveMap.o
+.PHONY : src/gototreasure.o
 
 # target to build an object file
-src/moveMap.cpp.o:
-	cd /home/adam/wsfinal/build && $(MAKE) -f scavenger_hunt/CMakeFiles/moveMap.dir/build.make scavenger_hunt/CMakeFiles/moveMap.dir/src/moveMap.cpp.o
-.PHONY : src/moveMap.cpp.o
+src/gototreasure.cpp.o:
+	cd /home/adam/wsfinal/build && $(MAKE) -f scavenger_hunt/CMakeFiles/gototreasure.dir/build.make scavenger_hunt/CMakeFiles/gototreasure.dir/src/gototreasure.cpp.o
+.PHONY : src/gototreasure.cpp.o
 
-src/moveMap.i: src/moveMap.cpp.i
+src/gototreasure.i: src/gototreasure.cpp.i
 
-.PHONY : src/moveMap.i
+.PHONY : src/gototreasure.i
 
 # target to preprocess a source file
-src/moveMap.cpp.i:
-	cd /home/adam/wsfinal/build && $(MAKE) -f scavenger_hunt/CMakeFiles/moveMap.dir/build.make scavenger_hunt/CMakeFiles/moveMap.dir/src/moveMap.cpp.i
-.PHONY : src/moveMap.cpp.i
+src/gototreasure.cpp.i:
+	cd /home/adam/wsfinal/build && $(MAKE) -f scavenger_hunt/CMakeFiles/gototreasure.dir/build.make scavenger_hunt/CMakeFiles/gototreasure.dir/src/gototreasure.cpp.i
+.PHONY : src/gototreasure.cpp.i
 
-src/moveMap.s: src/moveMap.cpp.s
+src/gototreasure.s: src/gototreasure.cpp.s
 
-.PHONY : src/moveMap.s
+.PHONY : src/gototreasure.s
 
 # target to generate assembly for a file
-src/moveMap.cpp.s:
-	cd /home/adam/wsfinal/build && $(MAKE) -f scavenger_hunt/CMakeFiles/moveMap.dir/build.make scavenger_hunt/CMakeFiles/moveMap.dir/src/moveMap.cpp.s
-.PHONY : src/moveMap.cpp.s
+src/gototreasure.cpp.s:
+	cd /home/adam/wsfinal/build && $(MAKE) -f scavenger_hunt/CMakeFiles/gototreasure.dir/build.make scavenger_hunt/CMakeFiles/gototreasure.dir/src/gototreasure.cpp.s
+.PHONY : src/gototreasure.cpp.s
 
 src/treasurelocator.o: src/treasurelocator.cpp.o
 
@@ -299,20 +299,20 @@ help:
 	@echo "... depend"
 	@echo "... list_install_components"
 	@echo "... install"
-	@echo "... edit_cache"
 	@echo "... test"
+	@echo "... edit_cache"
+	@echo "... gototreasure"
 	@echo "... rebuild_cache"
 	@echo "... currentPos"
 	@echo "... install/local"
 	@echo "... treasurelocator"
-	@echo "... moveMap"
 	@echo "... install/strip"
 	@echo "... src/currentPos.o"
 	@echo "... src/currentPos.i"
 	@echo "... src/currentPos.s"
-	@echo "... src/moveMap.o"
-	@echo "... src/moveMap.i"
-	@echo "... src/moveMap.s"
+	@echo "... src/gototreasure.o"
+	@echo "... src/gototreasure.i"
+	@echo "... src/gototreasure.s"
 	@echo "... src/treasurelocator.o"
 	@echo "... src/treasurelocator.i"
 	@echo "... src/treasurelocator.s"

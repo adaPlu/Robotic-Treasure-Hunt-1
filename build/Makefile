@@ -2519,6 +2519,19 @@ actionlib_generate_messages_nodejs/fast:
 .PHONY : actionlib_generate_messages_nodejs/fast
 
 #=============================================================================
+# Target rules for targets named gototreasure
+
+# Build rule for target.
+gototreasure: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gototreasure
+.PHONY : gototreasure
+
+# fast build rule for target.
+gototreasure/fast:
+	$(MAKE) -f scavenger_hunt/CMakeFiles/gototreasure.dir/build.make scavenger_hunt/CMakeFiles/gototreasure.dir/build
+.PHONY : gototreasure/fast
+
+#=============================================================================
 # Target rules for targets named currentPos
 
 # Build rule for target.
@@ -2543,19 +2556,6 @@ treasurelocator: cmake_check_build_system
 treasurelocator/fast:
 	$(MAKE) -f scavenger_hunt/CMakeFiles/treasurelocator.dir/build.make scavenger_hunt/CMakeFiles/treasurelocator.dir/build
 .PHONY : treasurelocator/fast
-
-#=============================================================================
-# Target rules for targets named moveMap
-
-# Build rule for target.
-moveMap: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 moveMap
-.PHONY : moveMap
-
-# fast build rule for target.
-moveMap/fast:
-	$(MAKE) -f scavenger_hunt/CMakeFiles/moveMap.dir/build.make scavenger_hunt/CMakeFiles/moveMap.dir/build
-.PHONY : moveMap/fast
 
 # Help Target
 help:
@@ -2751,9 +2751,9 @@ help:
 	@echo "... actionlib_generate_messages_lisp"
 	@echo "... actionlib_msgs_generate_messages_cpp"
 	@echo "... actionlib_generate_messages_nodejs"
+	@echo "... gototreasure"
 	@echo "... currentPos"
 	@echo "... treasurelocator"
-	@echo "... moveMap"
 .PHONY : help
 
 

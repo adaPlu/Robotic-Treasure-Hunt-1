@@ -1,8 +1,8 @@
 <launch>
   <node
     pkg="scavenger_hunt"
-    type="moveMap"
-    name="moveMap"
+    type="gototreasure"
+    name="gototreasure"
   />
   <node
     pkg="scavenger_hunt"

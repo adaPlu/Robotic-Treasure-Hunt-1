@@ -119,6 +119,7 @@ catkin_package(
 ## Your package locations should be listed before other locations
 # include_directories(include)
 include_directories(
+  include ${catkin_INCLUDE_DIRS}
   ${catkin_INCLUDE_DIRS}
 )
 
@@ -135,7 +136,7 @@ include_directories(
 ## Declare a C++ executable
 # add_executable(scavenger_hunt_node src/scavenger_hunt_node.cpp)
 add_executable(treasurelocator src/treasurelocator.cpp)
-add_executable(moveMap src/moveMap.cpp)
+add_executable(gototreasure src/gototreasure.cpp)
 add_executable(currentPos src/currentPos.cpp)
 ## Add cmake target dependencies of the executable
 ## same as for the library above
@@ -147,7 +148,7 @@ add_executable(currentPos src/currentPos.cpp)
 # )
 
 target_link_libraries(treasurelocator ${catkin_LIBRARIES})
-target_link_libraries(moveMap ${catkin_LIBRARIES})
+target_link_libraries(gototreasure ${catkin_LIBRARIES})
 target_link_libraries(currentPos ${catkin_LIBRARIES})
 #############
 ## Install ##
