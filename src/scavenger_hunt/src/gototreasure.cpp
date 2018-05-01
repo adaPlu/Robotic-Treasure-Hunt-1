@@ -3,26 +3,26 @@
 Adam Pluguez
 UC Merced CSE 180 Robotics
 Final Project
-Uses Move base to move to receieved point. Configured to go to 10 fixed map points then rotate 360 degrees in an attempt to locate any nearby treasures.
-Will be increased to 16 points, may remove 360 rotation depending on path chosen coverage*/
+Uses Move base to move to a group of fixed map points designed to cover the enitire map.
+*/
 #include <ros/ros.h>
 #include <move_base_msgs/MoveBaseAction.h>
 #include <actionlib/client/simple_action_client.h>
-#include "geometry_msgs/Pose2D.h"
-#include <tf2/LinearMath/Quaternion.h>
-#include <tf2_geometry_msgs/tf2_geometry_msgs.h>
+//#include "geometry_msgs/Pose2D.h"
+//#include <tf2/LinearMath/Quaternion.h>
+//#include <tf2_geometry_msgs/tf2_geometry_msgs.h>
 #include <geometry_msgs/PoseWithCovarianceStamped.h>
 #include <geometry_msgs/Twist.h>
 #include <time.h>
 
-void currentPoseCallBack(const geometry_msgs::PoseWithCovarianceStamped&msg);
-void recieveTargetPose(const geometry_msgs::Pose2D&msg);
+//void currentPoseCallBack(const geometry_msgs::PoseWithCovarianceStamped&msg);
 void serviceActivated();
 void serviceDone(const actionlib::SimpleClientGoalState& state,const move_base_msgs::MoveBaseResultConstPtr& result);
 void serviceFeedback(const move_base_msgs::MoveBaseFeedbackConstPtr& fb);
-double getDistance(double x1, double y1, double x2, double y2);
-void scan360();
+//void scan360();
 void turn(double rel_angle, double ang_speed, bool isClockwise);
+void setGoal(double x, double y);
+
 
 ros::Publisher vel;
 geometry_msgs::Pose currentPose;
@@ -32,18 +32,11 @@ typedef actionlib::SimpleActionClient<move_base_msgs::MoveBaseAction> MoveBaseCl
 
 
 int main(int argc, char** argv){
-  ros::init(argc, argv, "moveMap");
+  ros::init(argc, argv, "gototreasure");
   ros::NodeHandle nh;
-  ros::Subscriber subCurrentpose = nh.subscribe("/amcl_pose", 10, &currentPoseCallBack);
-  //ros::Subscriber subGoalPose = nh.subscribe("targetpose",10, &recieveTargetPose);
+  //ros::Subscriber subCurrentpose = nh.subscribe("/amcl_pose", 10, &currentPoseCallBack);
   vel =nh.advertise<geometry_msgs::Twist>("/husky_velocity_controller/cmd_vel", 10);
   ros::Rate loop_rate(10);
-
- goal.target_pose.header.frame_id = "map";
- goal.target_pose.header.stamp = ros::Time::now();
- goal.target_pose.pose.position.x = 0;
- goal.target_pose.pose.position.y = 8;
- goal.target_pose.pose.orientation.w = 1;
 
   //tell the action client that we want to spin a thread by default
   MoveBaseClient ac("move_base", true);
@@ -53,188 +46,232 @@ int main(int argc, char** argv){
     ROS_INFO("Waiting for the move_base action server to come up");
   }
   
-  turn(13, 1, 1);
+  //turn(13, 1, 1);
+
+  setGoal(0,2);
+
+  ROS_INFO("Sending goal");
+  ac.sendGoal(goal,&serviceDone,&serviceActivated,&serviceFeedback);
+  ac.waitForResult();
+  if(ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED){
+   			ROS_INFO("The base moved to goal!");
+			//turn(13, 1, 1);
+  }
+  else{
+    		ROS_INFO("The base failed to move to goal for some reason.");
+			//turn(13, 1, 1);
+  }
+
+  setGoal(8,2);
+
+  ROS_INFO("Sending goal");
+  ac.sendGoal(goal,&serviceDone,&serviceActivated,&serviceFeedback);
+	ac.waitForResult();
+	if(ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED){
+   			ROS_INFO("The base moved to goal!");
+			//turn(13, 1, 1);
+	}
+  else{
+    		ROS_INFO("The base failed to move to goal for some reason.");
+			//turn(13, 1, 1);
+  }
+  
+
+  setGoal(8,4);
+  
+  ROS_INFO("Sending goal");
+  ac.sendGoal(goal,&serviceDone,&serviceActivated,&serviceFeedback);
+	ac.waitForResult();
+	if(ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED){
+   			ROS_INFO("The base moved to goal!");
+			//turn(13, 1, 1);
+	}
+  else{
+    		ROS_INFO("The base failed to move to goal for some reason.");
+			//turn(13, 1, 1);
+  }
+  
+  setGoal(0,4);
+  
+  ROS_INFO("Sending goal");
+  ac.sendGoal(goal,&serviceDone,&serviceActivated,&serviceFeedback);
+	ac.waitForResult();
+	if(ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED){
+   			ROS_INFO("The base moved to goal!");
+			//turn(13, 1, 1);
+	}
+  else{
+    		ROS_INFO("The base failed to move to goal for some reason.");
+			//turn(13, 1, 1);
+  }
+
  
-  ROS_INFO("Sending goal");
-  ac.sendGoal(goal,&serviceDone,&serviceActivated,&serviceFeedback);
-	ac.waitForResult();
-	if(ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED){
-   			ROS_INFO("The base moved to goal!");
-			  turn(13, 1, 1);
-	}
-  else{
-    		ROS_INFO("The base failed to move to goal for some reason.");
-			  turn(13, 1, 1);
-  }
- 
-  goal.target_pose.header.frame_id = "map";
-  goal.target_pose.header.stamp = ros::Time::now();
-  goal.target_pose.pose.position.x = 8;
-  goal.target_pose.pose.position.y = 8;
-  goal.target_pose.pose.orientation.w = 1;
+  setGoal(0,6); 
 
   ROS_INFO("Sending goal");
   ac.sendGoal(goal,&serviceDone,&serviceActivated,&serviceFeedback);
 	ac.waitForResult();
 	if(ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED){
    			ROS_INFO("The base moved to goal!");
-			  turn(13, 1, 1);
+			//turn(13, 1, 1);
 	}
   else{
     		ROS_INFO("The base failed to move to goal for some reason.");
-			  turn(13, 1, 1);
+			//turn(13, 1, 1);
   }
 
-  goal.target_pose.header.frame_id = "map";
-  goal.target_pose.header.stamp = ros::Time::now();
-  goal.target_pose.pose.position.x = 8;
-  goal.target_pose.pose.position.y = 2; 
-  ROS_INFO("Sending goal");
-  ac.sendGoal(goal,&serviceDone,&serviceActivated,&serviceFeedback);
-	ac.waitForResult();
-	if(ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED){
-   			ROS_INFO("The base moved to goal!");
-			  turn(13, 1, 1);
-	}
-  else{
-    		ROS_INFO("The base failed to move to goal for some reason.");
-			  turn(13, 1, 1);
-  }
-
-  goal.target_pose.header.frame_id = "map";
-  goal.target_pose.header.stamp = ros::Time::now();
-  goal.target_pose.pose.position.x = 8;
-  goal.target_pose.pose.position.y = -2; 
-  ROS_INFO("Sending goal");
-  ac.sendGoal(goal,&serviceDone,&serviceActivated,&serviceFeedback);
-	ac.waitForResult();
-	if(ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED){
-   			ROS_INFO("The base moved to goal!");
-			  turn(13, 1, 1);
-	}
-  else{
-    		ROS_INFO("The base failed to move to goal for some reason.");
-			  turn(13, 1, 1);
-  }
-
-  goal.target_pose.header.frame_id = "map";
-  goal.target_pose.header.stamp = ros::Time::now();
-  goal.target_pose.pose.position.x = 8;
-  goal.target_pose.pose.position.y = -8;
-  goal.target_pose.pose.orientation.w = 1;
+  
+  setGoal(8,6);
 
   ROS_INFO("Sending goal");
   ac.sendGoal(goal,&serviceDone,&serviceActivated,&serviceFeedback);
 	ac.waitForResult();
 	if(ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED){
    			ROS_INFO("The base moved to goal!");
-			  turn(13, 1, 1);
+			//turn(13, 1, 1);
 	}
   else{
     		ROS_INFO("The base failed to move to goal for some reason.");
-			  turn(13, 1, 1);
+			//turn(13, 1, 1);
   }
 
   
 
-  goal.target_pose.header.frame_id = "map";
-  goal.target_pose.header.stamp = ros::Time::now();
-  goal.target_pose.pose.position.x = 0;
-  goal.target_pose.pose.position.y = -8;
-  goal.target_pose.pose.orientation.w = 1;
+  
+  setGoal(8,8);
 
   ROS_INFO("Sending goal");
   ac.sendGoal(goal,&serviceDone,&serviceActivated,&serviceFeedback);
 	ac.waitForResult();
 	if(ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED){
    			ROS_INFO("The base moved to goal!");
-			  turn(13, 1, 1);
+			//turn(13, 1, 1);
 	}
   else{
     		ROS_INFO("The base failed to move to goal for some reason.");
-			  turn(13, 1, 1);
+			//turn(13, 1, 1);
   }
 
-  goal.target_pose.header.frame_id = "map";
-  goal.target_pose.header.stamp = ros::Time::now();
-  goal.target_pose.pose.position.x = -8;
-  goal.target_pose.pose.position.y = -8;
-  goal.target_pose.pose.orientation.w = 1;
+  
+  setGoal(0,8);
 
   ROS_INFO("Sending goal");
   ac.sendGoal(goal,&serviceDone,&serviceActivated,&serviceFeedback);
 	ac.waitForResult();
 	if(ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED){
    			ROS_INFO("The base moved to goal!");
-			  turn(13, 1, 1);
+			//turn(13, 1, 1);
 	}
   else{
     		ROS_INFO("The base failed to move to goal for some reason.");
-			  turn(13, 1, 1);
+			//turn(13, 1, 1);
   }
 
-  goal.target_pose.header.frame_id = "map";
-  goal.target_pose.header.stamp = ros::Time::now();
-  goal.target_pose.pose.position.x = -8;
-  goal.target_pose.pose.position.y = -2;
-  goal.target_pose.pose.orientation.w = 1;
+
+	setGoal(-4,8);
 
   ROS_INFO("Sending goal");
   ac.sendGoal(goal,&serviceDone,&serviceActivated,&serviceFeedback);
 	ac.waitForResult();
 	if(ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED){
    			ROS_INFO("The base moved to goal!");
-			  turn(13, 1, 1);
+			//turn(13, 1, 1);
 	}
   else{
     		ROS_INFO("The base failed to move to goal for some reason.");
-			  turn(13, 1, 1);
+			//turn(13, 1, 1);
   }
-   goal.target_pose.header.frame_id = "map";
-  goal.target_pose.header.stamp = ros::Time::now();
-  goal.target_pose.pose.position.x = -8;
-  goal.target_pose.pose.position.y = 2;
-  goal.target_pose.pose.orientation.w = 1;
+
+ 
+  setGoal(-8,8);
 
   ROS_INFO("Sending goal");
   ac.sendGoal(goal,&serviceDone,&serviceActivated,&serviceFeedback);
 	ac.waitForResult();
 	if(ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED){
    			ROS_INFO("The base moved to goal!");
-			  turn(13, 1, 1);
+			//turn(13, 1, 1);
 	}
   else{
     		ROS_INFO("The base failed to move to goal for some reason.");
-			  turn(13, 1, 1);
+			//turn(13, 1, 1);
   }
-  goal.target_pose.header.frame_id = "map";
-  goal.target_pose.header.stamp = ros::Time::now();
-  goal.target_pose.pose.position.x = -8;
-  goal.target_pose.pose.position.y = 8;
-  goal.target_pose.pose.orientation.w = 1;
+
+  
+  setGoal(-8,6);
 
   ROS_INFO("Sending goal");
   ac.sendGoal(goal,&serviceDone,&serviceActivated,&serviceFeedback);
 	ac.waitForResult();
 	if(ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED){
    			ROS_INFO("The base moved to goal!");
-			  turn(13, 1, 1);
+			//turn(13, 1, 1);
 	}
   else{
     		ROS_INFO("The base failed to move to goal for some reason.");
-			  turn(13, 1, 1);
+			//turn(13, 1, 1);
+  }
+   
+  setGoal(0,6);
+
+  ROS_INFO("Sending goal");
+  ac.sendGoal(goal,&serviceDone,&serviceActivated,&serviceFeedback);
+	ac.waitForResult();
+	if(ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED){
+   			ROS_INFO("The base moved to goal!");
+			//turn(13, 1, 1);
+	}
+  else{
+    		ROS_INFO("The base failed to move to goal for some reason.");
+			//turn(13, 1, 1);
+  }
+  
+  setGoal(0,4);
+
+  ROS_INFO("Sending goal");
+  ac.sendGoal(goal,&serviceDone,&serviceActivated,&serviceFeedback);
+	ac.waitForResult();
+	if(ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED){
+   			ROS_INFO("The base moved to goal!");
+			//turn(13, 1, 1);
+	}
+  else{
+    		ROS_INFO("The base failed to move to goal for some reason.");
+			//turn(13, 1, 1);
   }
 
+	setGoal(-8,4);
+
+  ROS_INFO("Sending goal");
+  ac.sendGoal(goal,&serviceDone,&serviceActivated,&serviceFeedback);
+	ac.waitForResult();
+	if(ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED){
+   			ROS_INFO("The base moved to goal!");
+			//turn(13, 1, 1);
+	}
+  else{
+    		ROS_INFO("The base failed to move to goal for some reason.");
+			//turn(13, 1, 1);
+  }
+
+  setGoal(-8,3);
+
+  ROS_INFO("Sending goal");
+  ac.sendGoal(goal,&serviceDone,&serviceActivated,&serviceFeedback);
+	ac.waitForResult();
+	if(ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED){
+   			ROS_INFO("The base moved to goal!");
+			//turn(13, 1, 1);
+	}
+  else{
+    		ROS_INFO("The base failed to move to goal for some reason.");
+			//turn(13, 1, 1);
+  }
   return 0;
 }
 
 
 //Functions
-double getDistance(double x1, double y1, double x2, double y2){
-	return sqrt(pow((x1-x2), 2) + pow((y1-y2), 2));
-}
-
-
 void serviceActivated() {
     ROS_INFO_STREAM("Service received goal");
 }
@@ -252,23 +289,7 @@ void serviceFeedback(const move_base_msgs::MoveBaseFeedbackConstPtr& fb) {
 		    fb->base_position.pose.position.y);
 }
 
-void recieveTargetPose(const geometry_msgs::Pose2D&msg) {
-  goal.target_pose.header.frame_id = "map";
-  goal.target_pose.header.stamp = ros::Time::now();
-  goal.target_pose.pose.position.x = msg.x;
-  goal.target_pose.pose.position.y = msg.y;
-  tf2::Quaternion q;
-  q.setRPY(0,0,msg.theta);
-  goal.target_pose.pose.orientation.x = q.x();
-  goal.target_pose.pose.orientation.y = q.y();
-  goal.target_pose.pose.orientation.z = q.z();
-  goal.target_pose.pose.orientation.w = q.w();
-  STOP = false;
-
-	return;
-
-}
-
+/*
 void currentPoseCallBack(const geometry_msgs::PoseWithCovarianceStamped&msg){
   currentPose.position.x = msg.pose.pose.position.x;
   currentPose.position.y = msg.pose.pose.position.y;
@@ -300,7 +321,7 @@ void scan360(){
   vel.publish(twist);
 
 }
-
+*/
 void turn(double rel_angle, double ang_speed, bool isClockwise){
     ROS_INFO("Scanning goal area....");
 	geometry_msgs::Twist twist;
@@ -323,4 +344,12 @@ void turn(double rel_angle, double ang_speed, bool isClockwise){
 	twist.angular.z = 0;
         vel.publish(twist);
 
+}
+
+void setGoal(double x, double y){
+  goal.target_pose.header.frame_id = "map";
+  goal.target_pose.header.stamp = ros::Time::now();
+  goal.target_pose.pose.position.x = x;
+  goal.target_pose.pose.position.y = y;
+  goal.target_pose.pose.orientation.w = 1;
 }

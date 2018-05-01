@@ -2519,19 +2519,6 @@ actionlib_generate_messages_nodejs/fast:
 .PHONY : actionlib_generate_messages_nodejs/fast
 
 #=============================================================================
-# Target rules for targets named gototreasure
-
-# Build rule for target.
-gototreasure: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 gototreasure
-.PHONY : gototreasure
-
-# fast build rule for target.
-gototreasure/fast:
-	$(MAKE) -f scavenger_hunt/CMakeFiles/gototreasure.dir/build.make scavenger_hunt/CMakeFiles/gototreasure.dir/build
-.PHONY : gototreasure/fast
-
-#=============================================================================
 # Target rules for targets named currentPos
 
 # Build rule for target.
@@ -2545,17 +2532,30 @@ currentPos/fast:
 .PHONY : currentPos/fast
 
 #=============================================================================
-# Target rules for targets named treasurelocator
+# Target rules for targets named treasurelocater
 
 # Build rule for target.
-treasurelocator: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 treasurelocator
-.PHONY : treasurelocator
+treasurelocater: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 treasurelocater
+.PHONY : treasurelocater
 
 # fast build rule for target.
-treasurelocator/fast:
-	$(MAKE) -f scavenger_hunt/CMakeFiles/treasurelocator.dir/build.make scavenger_hunt/CMakeFiles/treasurelocator.dir/build
-.PHONY : treasurelocator/fast
+treasurelocater/fast:
+	$(MAKE) -f scavenger_hunt/CMakeFiles/treasurelocater.dir/build.make scavenger_hunt/CMakeFiles/treasurelocater.dir/build
+.PHONY : treasurelocater/fast
+
+#=============================================================================
+# Target rules for targets named gototreasure
+
+# Build rule for target.
+gototreasure: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gototreasure
+.PHONY : gototreasure
+
+# fast build rule for target.
+gototreasure/fast:
+	$(MAKE) -f scavenger_hunt/CMakeFiles/gototreasure.dir/build.make scavenger_hunt/CMakeFiles/gototreasure.dir/build
+.PHONY : gototreasure/fast
 
 # Help Target
 help:
@@ -2751,9 +2751,9 @@ help:
 	@echo "... actionlib_generate_messages_lisp"
 	@echo "... actionlib_msgs_generate_messages_cpp"
 	@echo "... actionlib_generate_messages_nodejs"
-	@echo "... gototreasure"
 	@echo "... currentPos"
-	@echo "... treasurelocator"
+	@echo "... treasurelocater"
+	@echo "... gototreasure"
 .PHONY : help
 
 
