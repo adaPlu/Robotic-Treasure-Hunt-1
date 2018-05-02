@@ -1,0 +1,88 @@
+#include <ros/ros.h>
+#include <logical_camera_plugin/logicalImage.h>
+#include <geometry_msgs/PoseWithCovarianceStamped.h>
+#include <iostream>
+#include <string>
+#include <vector>
+#include <tf/tfMessage.h>
+#include <geometry_msgs/Vector3.h>
+
+std::vector<std::string> treasureNames;
+
+float robotX, robotY;
+
+void tfform(const tf::tfMessage &msg){
+
+	geometry_msgs::Vector3 Point = msg.transforms.transform.translation;
+
+	ROS_INFO_STREAM("Maybe its here: " << Point);
+}
+
+void printCoordinatesName(std::string name, float x, float y){
+
+	x = x + robotX;
+	y = y + robotY;
+
+	ROS_INFO_STREAM("Name: " << name);
+	ROS_INFO_STREAM("X location: " << x);
+	ROS_INFO_STREAM("Y location: " << y);
+}
+
+void Location(const geometry_msgs::PoseWithCovarianceStamped &msg){
+
+	robotX = msg.pose.pose.position.x;
+	robotY = msg.pose.pose.position.y;
+	ROS_INFO_STREAM("Robot pose " << msg.pose.pose.position);
+}
+
+void LogicalCameraMessage(const logical_camera_plugin::logicalImage &msg){
+
+	std::string foundTreasure = msg.modelName;
+	float x = msg.pose_pos_x;
+	float y = msg.pose_pos_y;
+
+	if(treasureNames.empty()){
+
+		treasureNames.insert(treasureNames.begin(), foundTreasure);
+		printCoordinatesName(foundTreasure, x, y);
+	}
+
+	else{
+		int vecsize = treasureNames.size();
+		bool found = false;
+
+		for(int i=0; i < vecsize; i++){
+
+			std::string knownTreasure = treasureNames.at(i);
+
+			if(foundTreasure.compare(knownTreasure) == 0){
+
+				found = true;
+				break;
+			}
+		}
+
+		if(found == false){
+
+			treasureNames.insert(treasureNames.begin(), foundTreasure);
+			printCoordinatesName(foundTreasure, x, y);
+		}
+	}
+}
+
+int main(int argc, char** argv){
+
+ros::init(argc, argv, "treasurelocator");
+
+ros::NodeHandle nh;
+
+ros::Subscriber logcamera = nh.subscribe("/objectsDetected",1000, &LogicalCameraMessage);
+
+ros::Subscriber robotlocation = nh.subscribe("/amcl_pose", 1000, &Location);
+
+ros::Subscriber tfformation = nh.subscribe("/tf", 1000, &tfform);
+
+ros::spin();
+
+}
+

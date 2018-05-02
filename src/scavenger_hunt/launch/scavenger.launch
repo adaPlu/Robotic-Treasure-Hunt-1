@@ -1,0 +1,13 @@
+<launch>
+  <node
+    pkg="scavenger_hunt"
+    type="gototreasure"
+    name="gototreasure"
+  />
+  <node
+    pkg="scavenger_hunt"
+    type="treasurelocator"
+    name="treasurelocator"
+    output="screen"
+  />
+</launch>
