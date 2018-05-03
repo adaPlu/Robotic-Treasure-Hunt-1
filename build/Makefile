@@ -2519,6 +2519,7 @@ actionlib_generate_messages_nodejs/fast:
 .PHONY : actionlib_generate_messages_nodejs/fast
 
 #=============================================================================
+<<<<<<< HEAD
 # Target rules for targets named gototreasure
 
 # Build rule for target.
@@ -2543,6 +2544,45 @@ currentPos: cmake_check_build_system
 currentPos/fast:
 	$(MAKE) -f scavenger_hunt/CMakeFiles/currentPos.dir/build.make scavenger_hunt/CMakeFiles/currentPos.dir/build
 .PHONY : currentPos/fast
+=======
+# Target rules for targets named gotopose
+
+# Build rule for target.
+gotopose: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gotopose
+.PHONY : gotopose
+
+# fast build rule for target.
+gotopose/fast:
+	$(MAKE) -f scavenger_hunt/CMakeFiles/gotopose.dir/build.make scavenger_hunt/CMakeFiles/gotopose.dir/build
+.PHONY : gotopose/fast
+
+#=============================================================================
+# Target rules for targets named moveMap
+
+# Build rule for target.
+moveMap: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 moveMap
+.PHONY : moveMap
+
+# fast build rule for target.
+moveMap/fast:
+	$(MAKE) -f scavenger_hunt/CMakeFiles/moveMap.dir/build.make scavenger_hunt/CMakeFiles/moveMap.dir/build
+.PHONY : moveMap/fast
+
+#=============================================================================
+# Target rules for targets named getpose
+
+# Build rule for target.
+getpose: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 getpose
+.PHONY : getpose
+
+# fast build rule for target.
+getpose/fast:
+	$(MAKE) -f scavenger_hunt/CMakeFiles/getpose.dir/build.make scavenger_hunt/CMakeFiles/getpose.dir/build
+.PHONY : getpose/fast
+>>>>>>> master
 
 #=============================================================================
 # Target rules for targets named treasurelocator
@@ -2751,8 +2791,14 @@ help:
 	@echo "... actionlib_generate_messages_lisp"
 	@echo "... actionlib_msgs_generate_messages_cpp"
 	@echo "... actionlib_generate_messages_nodejs"
+<<<<<<< HEAD
 	@echo "... gototreasure"
 	@echo "... currentPos"
+=======
+	@echo "... gotopose"
+	@echo "... moveMap"
+	@echo "... getpose"
+>>>>>>> master
 	@echo "... treasurelocator"
 .PHONY : help
 

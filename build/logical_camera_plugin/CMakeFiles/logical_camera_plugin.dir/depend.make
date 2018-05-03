@@ -134,7 +134,10 @@ logical_camera_plugin/CMakeFiles/logical_camera_plugin.dir/src/logical_camera_pl
 logical_camera_plugin/CMakeFiles/logical_camera_plugin.dir/src/logical_camera_plugin.cpp.o: /usr/include/gazebo-7/gazebo/msgs/MessageTypes.hh
 logical_camera_plugin/CMakeFiles/logical_camera_plugin.dir/src/logical_camera_plugin.cpp.o: /usr/include/gazebo-7/gazebo/msgs/MsgFactory.hh
 logical_camera_plugin/CMakeFiles/logical_camera_plugin.dir/src/logical_camera_plugin.cpp.o: /usr/include/gazebo-7/gazebo/msgs/altimeter.pb.h
+<<<<<<< HEAD
 logical_camera_plugin/CMakeFiles/logical_camera_plugin.dir/src/logical_camera_plugin.cpp.o: /usr/include/gazebo-7/gazebo/msgs/any.pb.h
+=======
+>>>>>>> master
 logical_camera_plugin/CMakeFiles/logical_camera_plugin.dir/src/logical_camera_plugin.cpp.o: /usr/include/gazebo-7/gazebo/msgs/axis.pb.h
 logical_camera_plugin/CMakeFiles/logical_camera_plugin.dir/src/logical_camera_plugin.cpp.o: /usr/include/gazebo-7/gazebo/msgs/battery.pb.h
 logical_camera_plugin/CMakeFiles/logical_camera_plugin.dir/src/logical_camera_plugin.cpp.o: /usr/include/gazebo-7/gazebo/msgs/boxgeom.pb.h
@@ -295,11 +298,17 @@ logical_camera_plugin/CMakeFiles/logical_camera_plugin.dir/src/logical_camera_pl
 logical_camera_plugin/CMakeFiles/logical_camera_plugin.dir/src/logical_camera_plugin.cpp.o: /usr/include/ignition/math2/ignition/math/Frustum.hh
 logical_camera_plugin/CMakeFiles/logical_camera_plugin.dir/src/logical_camera_plugin.cpp.o: /usr/include/ignition/math2/ignition/math/Helpers.hh
 logical_camera_plugin/CMakeFiles/logical_camera_plugin.dir/src/logical_camera_plugin.cpp.o: /usr/include/ignition/math2/ignition/math/IndexException.hh
+<<<<<<< HEAD
 logical_camera_plugin/CMakeFiles/logical_camera_plugin.dir/src/logical_camera_plugin.cpp.o: /usr/include/ignition/math2/ignition/math/Inertial.hh
 logical_camera_plugin/CMakeFiles/logical_camera_plugin.dir/src/logical_camera_plugin.cpp.o: /usr/include/ignition/math2/ignition/math/Kmeans.hh
 logical_camera_plugin/CMakeFiles/logical_camera_plugin.dir/src/logical_camera_plugin.cpp.o: /usr/include/ignition/math2/ignition/math/Line2.hh
 logical_camera_plugin/CMakeFiles/logical_camera_plugin.dir/src/logical_camera_plugin.cpp.o: /usr/include/ignition/math2/ignition/math/Line3.hh
 logical_camera_plugin/CMakeFiles/logical_camera_plugin.dir/src/logical_camera_plugin.cpp.o: /usr/include/ignition/math2/ignition/math/MassMatrix3.hh
+=======
+logical_camera_plugin/CMakeFiles/logical_camera_plugin.dir/src/logical_camera_plugin.cpp.o: /usr/include/ignition/math2/ignition/math/Kmeans.hh
+logical_camera_plugin/CMakeFiles/logical_camera_plugin.dir/src/logical_camera_plugin.cpp.o: /usr/include/ignition/math2/ignition/math/Line2.hh
+logical_camera_plugin/CMakeFiles/logical_camera_plugin.dir/src/logical_camera_plugin.cpp.o: /usr/include/ignition/math2/ignition/math/Line3.hh
+>>>>>>> master
 logical_camera_plugin/CMakeFiles/logical_camera_plugin.dir/src/logical_camera_plugin.cpp.o: /usr/include/ignition/math2/ignition/math/Matrix3.hh
 logical_camera_plugin/CMakeFiles/logical_camera_plugin.dir/src/logical_camera_plugin.cpp.o: /usr/include/ignition/math2/ignition/math/Matrix4.hh
 logical_camera_plugin/CMakeFiles/logical_camera_plugin.dir/src/logical_camera_plugin.cpp.o: /usr/include/ignition/math2/ignition/math/Plane.hh

@@ -1687,8 +1687,11 @@ gazebo/util/system.hh
 /usr/include/gazebo-7/gazebo/msgs/MessageTypes.hh
 altimeter.pb.h
 /usr/include/gazebo-7/gazebo/msgs/altimeter.pb.h
+<<<<<<< HEAD
 any.pb.h
 /usr/include/gazebo-7/gazebo/msgs/any.pb.h
+=======
+>>>>>>> master
 axis.pb.h
 /usr/include/gazebo-7/gazebo/msgs/axis.pb.h
 battery.pb.h
@@ -1962,6 +1965,7 @@ gazebo/util/system.hh
 gazebo/msgs/MsgFactory.hh
 /usr/include/gazebo-7/gazebo/msgs/gazebo/msgs/MsgFactory.hh
 
+<<<<<<< HEAD
 /usr/include/gazebo-7/gazebo/msgs/any.pb.h
 string
 -
@@ -1996,6 +2000,8 @@ gazebo/util/system.hh
 gazebo/msgs/MsgFactory.hh
 /usr/include/gazebo-7/gazebo/msgs/gazebo/msgs/MsgFactory.hh
 
+=======
+>>>>>>> master
 /usr/include/gazebo-7/gazebo/msgs/axis.pb.h
 string
 -
@@ -3459,6 +3465,7 @@ string
 -
 sdf/sdf.hh
 -
+<<<<<<< HEAD
 ignition/math/Inertial.hh
 -
 ignition/math/MassMatrix3.hh
@@ -3468,6 +3475,13 @@ ignition/math/Plane.hh
 ignition/math/Pose3.hh
 -
 ignition/math/Vector3.hh
+=======
+ignition/math/Vector3.hh
+-
+ignition/math/Pose3.hh
+-
+ignition/math/Plane.hh
+>>>>>>> master
 -
 gazebo/math/Quaternion.hh
 /usr/include/gazebo-7/gazebo/msgs/gazebo/math/Quaternion.hh
@@ -4981,12 +4995,17 @@ Winsock2.h
 -
 string
 -
+<<<<<<< HEAD
 ignition/math/Inertial.hh
 -
 sdf/sdf.hh
 -
 gazebo/math/Pose.hh
 /usr/include/gazebo-7/gazebo/physics/gazebo/math/Pose.hh
+=======
+sdf/sdf.hh
+-
+>>>>>>> master
 gazebo/msgs/msgs.hh
 /usr/include/gazebo-7/gazebo/physics/gazebo/msgs/msgs.hh
 gazebo/math/Quaternion.hh
@@ -5081,8 +5100,11 @@ gazebo/util/system.hh
 /usr/include/gazebo-7/gazebo/physics/gazebo/util/system.hh
 
 /usr/include/gazebo-7/gazebo/physics/LinkState.hh
+<<<<<<< HEAD
 iostream
 -
+=======
+>>>>>>> master
 vector
 -
 string
@@ -5660,12 +5682,15 @@ stdexcept
 ignition/math/Helpers.hh
 -
 
+<<<<<<< HEAD
 /usr/include/ignition/math2/ignition/math/Inertial.hh
 ignition/math/MassMatrix3.hh
 /usr/include/ignition/math2/ignition/math/ignition/math/MassMatrix3.hh
 ignition/math/Pose3.hh
 /usr/include/ignition/math2/ignition/math/ignition/math/Pose3.hh
 
+=======
+>>>>>>> master
 /usr/include/ignition/math2/ignition/math/Kmeans.hh
 vector
 -
@@ -5690,6 +5715,7 @@ ignition/math/Vector3.hh
 ignition/math/IndexException.hh
 -
 
+<<<<<<< HEAD
 /usr/include/ignition/math2/ignition/math/MassMatrix3.hh
 algorithm
 -
@@ -5708,6 +5734,8 @@ ignition/math/Vector3.hh
 ignition/math/Matrix3.hh
 /usr/include/ignition/math2/ignition/math/ignition/math/Matrix3.hh
 
+=======
+>>>>>>> master
 /usr/include/ignition/math2/ignition/math/Matrix3.hh
 cstring
 -

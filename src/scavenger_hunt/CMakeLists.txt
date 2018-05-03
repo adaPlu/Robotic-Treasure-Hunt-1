@@ -119,7 +119,10 @@ catkin_package(
 ## Your package locations should be listed before other locations
 # include_directories(include)
 include_directories(
+<<<<<<< HEAD
   include ${catkin_INCLUDE_DIRS}
+=======
+>>>>>>> master
   ${catkin_INCLUDE_DIRS}
 )
 
@@ -136,8 +139,14 @@ include_directories(
 ## Declare a C++ executable
 # add_executable(scavenger_hunt_node src/scavenger_hunt_node.cpp)
 add_executable(treasurelocator src/treasurelocator.cpp)
+<<<<<<< HEAD
 add_executable(gototreasure src/gototreasure.cpp)
 add_executable(currentPos src/currentPos.cpp)
+=======
+add_executable(moveMap src/moveMap.cpp)
+add_executable(gotopose src/gotopose.cpp)
+add_executable(getpose src/getpose.cpp)
+>>>>>>> master
 ## Add cmake target dependencies of the executable
 ## same as for the library above
 # add_dependencies(scavenger_hunt_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
@@ -148,8 +157,14 @@ add_executable(currentPos src/currentPos.cpp)
 # )
 
 target_link_libraries(treasurelocator ${catkin_LIBRARIES})
+<<<<<<< HEAD
 target_link_libraries(gototreasure ${catkin_LIBRARIES})
 target_link_libraries(currentPos ${catkin_LIBRARIES})
+=======
+target_link_libraries(moveMap ${catkin_LIBRARIES})
+target_link_libraries(gotopose ${catkin_LIBRARIES})
+target_link_libraries(getpose ${catkin_LIBRARIES})
+>>>>>>> master
 #############
 ## Install ##
 #############

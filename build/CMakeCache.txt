@@ -112,7 +112,11 @@ CMAKE_AR:FILEPATH=/usr/bin/ar
 
 //Choose the type of build, options are: None(CMAKE_CXX_FLAGS or
 // CMAKE_C_FLAGS used) Debug Release RelWithDebInfo MinSizeRel.
+<<<<<<< HEAD
 CMAKE_BUILD_TYPE:STRING=Debug
+=======
+CMAKE_BUILD_TYPE:STRING=
+>>>>>>> master
 
 //Enable/Disable color output during build.
 CMAKE_COLOR_MAKEFILE:BOOL=ON

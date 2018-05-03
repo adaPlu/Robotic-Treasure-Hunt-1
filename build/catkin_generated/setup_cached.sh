@@ -7,4 +7,9 @@
 # new environment variables
 
 # modified environment variables
+<<<<<<< HEAD
 export PWD="/home/adam/wsfinal/build"
+=======
+export PWD="/home/adam/wsfinal/build"
+export ROS_PACKAGE_PATH="/home/iaguiluz/UCMEng_Collaboratory03/wsfinal/src:$ROS_PACKAGE_PATH"
+>>>>>>> master

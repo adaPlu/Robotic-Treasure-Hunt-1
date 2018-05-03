@@ -241,7 +241,11 @@ realtime_tools/realtime_publisher.h
 -
 ros/node_handle.h
 -
+<<<<<<< HEAD
 pluginlib/class_loader.hpp
+=======
+pluginlib/class_loader.h
+>>>>>>> master
 -
 controller_manager_msgs/ListControllerTypes.h
 -
@@ -752,6 +756,7 @@ ros/console.h
 ros/node_handle.h
 -
 
+<<<<<<< HEAD
 /opt/ros/kinetic/include/pluginlib/././class_loader.hpp
 map
 -
@@ -853,6 +858,57 @@ stdexcept
 -
 string
 -
+=======
+/opt/ros/kinetic/include/pluginlib/class_desc.h
+
+/opt/ros/kinetic/include/pluginlib/class_loader.h
+boost/algorithm/string.hpp
+/opt/ros/kinetic/include/pluginlib/boost/algorithm/string.hpp
+class_loader/multi_library_class_loader.h
+/opt/ros/kinetic/include/pluginlib/class_loader/multi_library_class_loader.h
+map
+-
+pluginlib/class_desc.h
+/opt/ros/kinetic/include/pluginlib/pluginlib/class_desc.h
+pluginlib/class_loader_base.h
+/opt/ros/kinetic/include/pluginlib/pluginlib/class_loader_base.h
+pluginlib/pluginlib_exceptions.h
+/opt/ros/kinetic/include/pluginlib/pluginlib/pluginlib_exceptions.h
+ros/console.h
+/opt/ros/kinetic/include/pluginlib/ros/console.h
+ros/package.h
+/opt/ros/kinetic/include/pluginlib/ros/package.h
+tinyxml.h
+/opt/ros/kinetic/include/pluginlib/tinyxml.h
+class_loader_imp.h
+/opt/ros/kinetic/include/pluginlib/class_loader_imp.h
+
+/opt/ros/kinetic/include/pluginlib/class_loader_base.h
+vector
+-
+string
+-
+
+/opt/ros/kinetic/include/pluginlib/class_loader_imp.h
+boost/bind.hpp
+/opt/ros/kinetic/include/pluginlib/boost/bind.hpp
+boost/filesystem.hpp
+/opt/ros/kinetic/include/pluginlib/boost/filesystem.hpp
+class_loader/class_loader.h
+-
+list
+-
+ros/package.h
+/opt/ros/kinetic/include/pluginlib/ros/package.h
+sstream
+-
+stdexcept
+-
+
+/opt/ros/kinetic/include/pluginlib/pluginlib_exceptions.h
+stdexcept
+-
+>>>>>>> master
 
 /opt/ros/kinetic/include/realtime_tools/realtime_publisher.h
 string

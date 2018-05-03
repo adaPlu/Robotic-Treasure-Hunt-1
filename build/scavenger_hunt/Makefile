@@ -56,6 +56,20 @@ CMAKE_BINARY_DIR = /home/adam/wsfinal/build
 #=============================================================================
 # Targets provided globally by CMake.
 
+<<<<<<< HEAD
+=======
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
+
+>>>>>>> master
 # Special rule for the target list_install_components
 list_install_components:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
@@ -66,6 +80,7 @@ list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
 
+<<<<<<< HEAD
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
@@ -88,6 +103,29 @@ test:
 test/fast: test
 
 .PHONY : test/fast
+=======
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: install/strip
+
+.PHONY : install/strip/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: install/local
+
+.PHONY : install/local/fast
+>>>>>>> master
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -111,6 +149,7 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
+<<<<<<< HEAD
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -132,6 +171,19 @@ install/strip: preinstall
 install/strip/fast: install/strip
 
 .PHONY : install/strip/fast
+=======
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+>>>>>>> master
 
 # The main all target
 all: cmake_check_build_system
@@ -166,6 +218,7 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+<<<<<<< HEAD
 scavenger_hunt/CMakeFiles/gototreasure.dir/rule:
 	cd /home/adam/wsfinal/build && $(MAKE) -f CMakeFiles/Makefile2 scavenger_hunt/CMakeFiles/gototreasure.dir/rule
 .PHONY : scavenger_hunt/CMakeFiles/gototreasure.dir/rule
@@ -194,6 +247,51 @@ currentPos: scavenger_hunt/CMakeFiles/currentPos.dir/rule
 currentPos/fast:
 	cd /home/adam/wsfinal/build && $(MAKE) -f scavenger_hunt/CMakeFiles/currentPos.dir/build.make scavenger_hunt/CMakeFiles/currentPos.dir/build
 .PHONY : currentPos/fast
+=======
+scavenger_hunt/CMakeFiles/gotopose.dir/rule:
+	cd /home/adam/wsfinal/build && $(MAKE) -f CMakeFiles/Makefile2 scavenger_hunt/CMakeFiles/gotopose.dir/rule
+.PHONY : scavenger_hunt/CMakeFiles/gotopose.dir/rule
+
+# Convenience name for target.
+gotopose: scavenger_hunt/CMakeFiles/gotopose.dir/rule
+
+.PHONY : gotopose
+
+# fast build rule for target.
+gotopose/fast:
+	cd /home/adam/wsfinal/build && $(MAKE) -f scavenger_hunt/CMakeFiles/gotopose.dir/build.make scavenger_hunt/CMakeFiles/gotopose.dir/build
+.PHONY : gotopose/fast
+
+# Convenience name for target.
+scavenger_hunt/CMakeFiles/moveMap.dir/rule:
+	cd /home/adam/wsfinal/build && $(MAKE) -f CMakeFiles/Makefile2 scavenger_hunt/CMakeFiles/moveMap.dir/rule
+.PHONY : scavenger_hunt/CMakeFiles/moveMap.dir/rule
+
+# Convenience name for target.
+moveMap: scavenger_hunt/CMakeFiles/moveMap.dir/rule
+
+.PHONY : moveMap
+
+# fast build rule for target.
+moveMap/fast:
+	cd /home/adam/wsfinal/build && $(MAKE) -f scavenger_hunt/CMakeFiles/moveMap.dir/build.make scavenger_hunt/CMakeFiles/moveMap.dir/build
+.PHONY : moveMap/fast
+
+# Convenience name for target.
+scavenger_hunt/CMakeFiles/getpose.dir/rule:
+	cd /home/adam/wsfinal/build && $(MAKE) -f CMakeFiles/Makefile2 scavenger_hunt/CMakeFiles/getpose.dir/rule
+.PHONY : scavenger_hunt/CMakeFiles/getpose.dir/rule
+
+# Convenience name for target.
+getpose: scavenger_hunt/CMakeFiles/getpose.dir/rule
+
+.PHONY : getpose
+
+# fast build rule for target.
+getpose/fast:
+	cd /home/adam/wsfinal/build && $(MAKE) -f scavenger_hunt/CMakeFiles/getpose.dir/build.make scavenger_hunt/CMakeFiles/getpose.dir/build
+.PHONY : getpose/fast
+>>>>>>> master
 
 # Convenience name for target.
 scavenger_hunt/CMakeFiles/treasurelocator.dir/rule:
@@ -210,6 +308,7 @@ treasurelocator/fast:
 	cd /home/adam/wsfinal/build && $(MAKE) -f scavenger_hunt/CMakeFiles/treasurelocator.dir/build.make scavenger_hunt/CMakeFiles/treasurelocator.dir/build
 .PHONY : treasurelocator/fast
 
+<<<<<<< HEAD
 src/currentPos.o: src/currentPos.cpp.o
 
 .PHONY : src/currentPos.o
@@ -263,6 +362,88 @@ src/gototreasure.s: src/gototreasure.cpp.s
 src/gototreasure.cpp.s:
 	cd /home/adam/wsfinal/build && $(MAKE) -f scavenger_hunt/CMakeFiles/gototreasure.dir/build.make scavenger_hunt/CMakeFiles/gototreasure.dir/src/gototreasure.cpp.s
 .PHONY : src/gototreasure.cpp.s
+=======
+src/getpose.o: src/getpose.cpp.o
+
+.PHONY : src/getpose.o
+
+# target to build an object file
+src/getpose.cpp.o:
+	cd /home/adam/wsfinal/build && $(MAKE) -f scavenger_hunt/CMakeFiles/getpose.dir/build.make scavenger_hunt/CMakeFiles/getpose.dir/src/getpose.cpp.o
+.PHONY : src/getpose.cpp.o
+
+src/getpose.i: src/getpose.cpp.i
+
+.PHONY : src/getpose.i
+
+# target to preprocess a source file
+src/getpose.cpp.i:
+	cd /home/adam/wsfinal/build && $(MAKE) -f scavenger_hunt/CMakeFiles/getpose.dir/build.make scavenger_hunt/CMakeFiles/getpose.dir/src/getpose.cpp.i
+.PHONY : src/getpose.cpp.i
+
+src/getpose.s: src/getpose.cpp.s
+
+.PHONY : src/getpose.s
+
+# target to generate assembly for a file
+src/getpose.cpp.s:
+	cd /home/adam/wsfinal/build && $(MAKE) -f scavenger_hunt/CMakeFiles/getpose.dir/build.make scavenger_hunt/CMakeFiles/getpose.dir/src/getpose.cpp.s
+.PHONY : src/getpose.cpp.s
+
+src/gotopose.o: src/gotopose.cpp.o
+
+.PHONY : src/gotopose.o
+
+# target to build an object file
+src/gotopose.cpp.o:
+	cd /home/adam/wsfinal/build && $(MAKE) -f scavenger_hunt/CMakeFiles/gotopose.dir/build.make scavenger_hunt/CMakeFiles/gotopose.dir/src/gotopose.cpp.o
+.PHONY : src/gotopose.cpp.o
+
+src/gotopose.i: src/gotopose.cpp.i
+
+.PHONY : src/gotopose.i
+
+# target to preprocess a source file
+src/gotopose.cpp.i:
+	cd /home/adam/wsfinal/build && $(MAKE) -f scavenger_hunt/CMakeFiles/gotopose.dir/build.make scavenger_hunt/CMakeFiles/gotopose.dir/src/gotopose.cpp.i
+.PHONY : src/gotopose.cpp.i
+
+src/gotopose.s: src/gotopose.cpp.s
+
+.PHONY : src/gotopose.s
+
+# target to generate assembly for a file
+src/gotopose.cpp.s:
+	cd /home/adam/wsfinal/build && $(MAKE) -f scavenger_hunt/CMakeFiles/gotopose.dir/build.make scavenger_hunt/CMakeFiles/gotopose.dir/src/gotopose.cpp.s
+.PHONY : src/gotopose.cpp.s
+
+src/moveMap.o: src/moveMap.cpp.o
+
+.PHONY : src/moveMap.o
+
+# target to build an object file
+src/moveMap.cpp.o:
+	cd /home/adam/wsfinal/build && $(MAKE) -f scavenger_hunt/CMakeFiles/moveMap.dir/build.make scavenger_hunt/CMakeFiles/moveMap.dir/src/moveMap.cpp.o
+.PHONY : src/moveMap.cpp.o
+
+src/moveMap.i: src/moveMap.cpp.i
+
+.PHONY : src/moveMap.i
+
+# target to preprocess a source file
+src/moveMap.cpp.i:
+	cd /home/adam/wsfinal/build && $(MAKE) -f scavenger_hunt/CMakeFiles/moveMap.dir/build.make scavenger_hunt/CMakeFiles/moveMap.dir/src/moveMap.cpp.i
+.PHONY : src/moveMap.cpp.i
+
+src/moveMap.s: src/moveMap.cpp.s
+
+.PHONY : src/moveMap.s
+
+# target to generate assembly for a file
+src/moveMap.cpp.s:
+	cd /home/adam/wsfinal/build && $(MAKE) -f scavenger_hunt/CMakeFiles/moveMap.dir/build.make scavenger_hunt/CMakeFiles/moveMap.dir/src/moveMap.cpp.s
+.PHONY : src/moveMap.cpp.s
+>>>>>>> master
 
 src/treasurelocator.o: src/treasurelocator.cpp.o
 
@@ -297,6 +478,7 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+<<<<<<< HEAD
 	@echo "... list_install_components"
 	@echo "... install"
 	@echo "... test"
@@ -313,6 +495,28 @@ help:
 	@echo "... src/gototreasure.o"
 	@echo "... src/gototreasure.i"
 	@echo "... src/gototreasure.s"
+=======
+	@echo "... test"
+	@echo "... gotopose"
+	@echo "... moveMap"
+	@echo "... list_install_components"
+	@echo "... getpose"
+	@echo "... install/strip"
+	@echo "... install/local"
+	@echo "... edit_cache"
+	@echo "... rebuild_cache"
+	@echo "... treasurelocator"
+	@echo "... install"
+	@echo "... src/getpose.o"
+	@echo "... src/getpose.i"
+	@echo "... src/getpose.s"
+	@echo "... src/gotopose.o"
+	@echo "... src/gotopose.i"
+	@echo "... src/gotopose.s"
+	@echo "... src/moveMap.o"
+	@echo "... src/moveMap.i"
+	@echo "... src/moveMap.s"
+>>>>>>> master
 	@echo "... src/treasurelocator.o"
 	@echo "... src/treasurelocator.i"
 	@echo "... src/treasurelocator.s"
