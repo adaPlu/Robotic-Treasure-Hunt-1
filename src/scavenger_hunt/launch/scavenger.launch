@@ -6,8 +6,8 @@
   />
   <node
     pkg="scavenger_hunt"
-    type="treasurelocater"
-    name="treasurelocater"
+    type="treasurelocator"
+    name="treasurelocator"
     output="screen"
   />
 </launch>

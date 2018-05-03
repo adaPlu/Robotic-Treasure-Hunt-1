@@ -11,11 +11,17 @@ Uses Move base to move to receieved point. Configured to go to 10 fixed map poin
 #include <geometry_msgs/Twist.h>
 #include <time.h>
 
+<<<<<<< HEAD
 
 void serviceActivated();
 void serviceDone(const actionlib::SimpleClientGoalState& state,const move_base_msgs::MoveBaseResultConstPtr& result);
 void serviceFeedback(const move_base_msgs::MoveBaseFeedbackConstPtr& fb);
 void turn(double rel_angle, double ang_speed, bool isClockwise);
+=======
+void serviceActivated();
+void serviceDone(const actionlib::SimpleClientGoalState& state,const move_base_msgs::MoveBaseResultConstPtr& result);
+void serviceFeedback(const move_base_msgs::MoveBaseFeedbackConstPtr& fb);
+>>>>>>> 0b19359d06cf7f7e4e82d0db01ab0b8b0f78368c
 void setGoal(double x, double y);
 
 ros::Publisher vel;
@@ -26,7 +32,10 @@ typedef actionlib::SimpleActionClient<move_base_msgs::MoveBaseAction> MoveBaseCl
 int main(int argc, char** argv){
   ros::init(argc, argv, "gototreasure");
   ros::NodeHandle nh;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0b19359d06cf7f7e4e82d0db01ab0b8b0f78368c
   vel =nh.advertise<geometry_msgs::Twist>("/husky_velocity_controller/cmd_vel", 10);
   ros::Rate loop_rate(10);
 
@@ -38,6 +47,7 @@ int main(int argc, char** argv){
     ROS_INFO("Waiting for the move_base action server to come up");
   }
   
+<<<<<<< HEAD
   turn(11, 1, 1);
   
   setGoal(2,8); 
@@ -55,12 +65,30 @@ int main(int argc, char** argv){
   }
  
   setGoal(8,8);
+=======
+
+  setGoal(8,0);
+
+  ROS_INFO("Sending goal");
+  ac.sendGoal(goal,&serviceDone,&serviceActivated,&serviceFeedback);
+  ac.waitForResult();
+  if(ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED){
+   			ROS_INFO("The base moved to goal!");
+			
+  }
+  else{
+    		ROS_INFO("The base failed to move to goal for some reason.");
+			
+  }
+
+>>>>>>> 0b19359d06cf7f7e4e82d0db01ab0b8b0f78368c
 
   ROS_INFO("Sending goal");
   ac.sendGoal(goal,&serviceDone,&serviceActivated,&serviceFeedback);
 	ac.waitForResult();
 	if(ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED){
    			ROS_INFO("The base moved to goal!");
+<<<<<<< HEAD
 			  turn(11, 1, 1);
 	}
   else{
@@ -69,12 +97,23 @@ int main(int argc, char** argv){
   }
   
   setGoal(8,2);
+=======
+
+	}
+  else{
+    		ROS_INFO("The base failed to move to goal for some reason.");
+			
+  }
+  
+  setGoal(4,4);
+>>>>>>> 0b19359d06cf7f7e4e82d0db01ab0b8b0f78368c
   
   ROS_INFO("Sending goal");
   ac.sendGoal(goal,&serviceDone,&serviceActivated,&serviceFeedback);
 	ac.waitForResult();
 	if(ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED){
    			ROS_INFO("The base moved to goal!");
+<<<<<<< HEAD
 			  turn(11, 1, 1);
 	}
   else{
@@ -83,12 +122,24 @@ int main(int argc, char** argv){
   }
 
   setGoal(8,-2);
+=======
+			
+	}
+  else{
+    		ROS_INFO("The base failed to move to goal for some reason.");
+			
+  }
+
+ 
+  setGoal(-4,4); 
+>>>>>>> 0b19359d06cf7f7e4e82d0db01ab0b8b0f78368c
 
   ROS_INFO("Sending goal");
   ac.sendGoal(goal,&serviceDone,&serviceActivated,&serviceFeedback);
 	ac.waitForResult();
 	if(ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED){
    			ROS_INFO("The base moved to goal!");
+<<<<<<< HEAD
 			  turn(11, 1, 1);
 	}
   else{
@@ -97,28 +148,53 @@ int main(int argc, char** argv){
   }
 
   setGoal(8,-8);
+=======
+			
+	}
+  else{
+    		ROS_INFO("The base failed to move to goal for some reason.");
+		
+  }
+
+  
+  setGoal(-8,4);
+>>>>>>> 0b19359d06cf7f7e4e82d0db01ab0b8b0f78368c
 
   ROS_INFO("Sending goal");
   ac.sendGoal(goal,&serviceDone,&serviceActivated,&serviceFeedback);
 	ac.waitForResult();
 	if(ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED){
    			ROS_INFO("The base moved to goal!");
+<<<<<<< HEAD
 			  turn(11, 1, 1);
 	}
   else{
     		ROS_INFO("The base failed to move to goal for some reason.");
 			  turn(11, 1, 1);
+=======
+		
+	}
+  else{
+    		ROS_INFO("The base failed to move to goal for some reason.");
+			
+>>>>>>> 0b19359d06cf7f7e4e82d0db01ab0b8b0f78368c
   }
 
   
 
+<<<<<<< HEAD
   setGoal(2,-8);
+=======
+  
+  setGoal(-8,8);
+>>>>>>> 0b19359d06cf7f7e4e82d0db01ab0b8b0f78368c
 
   ROS_INFO("Sending goal");
   ac.sendGoal(goal,&serviceDone,&serviceActivated,&serviceFeedback);
 	ac.waitForResult();
 	if(ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED){
    			ROS_INFO("The base moved to goal!");
+<<<<<<< HEAD
 			  turn(11, 1, 1);
 	}
   else{
@@ -127,12 +203,24 @@ int main(int argc, char** argv){
   }
 
   setGoal(-2,-8);
+=======
+			
+	}
+  else{
+    		ROS_INFO("The base failed to move to goal for some reason.");
+			
+  }
+
+  
+  setGoal(-4,8);
+>>>>>>> 0b19359d06cf7f7e4e82d0db01ab0b8b0f78368c
 
   ROS_INFO("Sending goal");
   ac.sendGoal(goal,&serviceDone,&serviceActivated,&serviceFeedback);
 	ac.waitForResult();
 	if(ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED){
    			ROS_INFO("The base moved to goal!");
+<<<<<<< HEAD
 			  turn(11, 1, 1);
 	}
   else{
@@ -141,12 +229,24 @@ int main(int argc, char** argv){
   }
 
   setGoal(-8,-8);
+=======
+			
+	}
+  else{
+    		ROS_INFO("The base failed to move to goal for some reason.");
+			
+  }
+
+
+	setGoal(4,8);
+>>>>>>> 0b19359d06cf7f7e4e82d0db01ab0b8b0f78368c
 
   ROS_INFO("Sending goal");
   ac.sendGoal(goal,&serviceDone,&serviceActivated,&serviceFeedback);
 	ac.waitForResult();
 	if(ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED){
    			ROS_INFO("The base moved to goal!");
+<<<<<<< HEAD
 			  turn(11, 1, 1);
 	}
   else{
@@ -155,12 +255,24 @@ int main(int argc, char** argv){
   }
 
   setGoal(-8,-2);
+=======
+			
+	}
+  else{
+    		ROS_INFO("The base failed to move to goal for some reason.");
+		
+  }
+
+ 
+  setGoal(8,8);
+>>>>>>> 0b19359d06cf7f7e4e82d0db01ab0b8b0f78368c
 
   ROS_INFO("Sending goal");
   ac.sendGoal(goal,&serviceDone,&serviceActivated,&serviceFeedback);
 	ac.waitForResult();
 	if(ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED){
    			ROS_INFO("The base moved to goal!");
+<<<<<<< HEAD
 			  turn(11, 1, 1);
 	}
   else{
@@ -169,12 +281,24 @@ int main(int argc, char** argv){
   }
 
   setGoal(-8,2);
+=======
+			
+	}
+  else{
+    		ROS_INFO("The base failed to move to goal for some reason.");
+			
+  }
+
+  
+  setGoal(8,-4);
+>>>>>>> 0b19359d06cf7f7e4e82d0db01ab0b8b0f78368c
 
   ROS_INFO("Sending goal");
   ac.sendGoal(goal,&serviceDone,&serviceActivated,&serviceFeedback);
 	ac.waitForResult();
 	if(ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED){
    			ROS_INFO("The base moved to goal!");
+<<<<<<< HEAD
 			  turn(11, 1, 1);
 	}
   else{
@@ -183,12 +307,51 @@ int main(int argc, char** argv){
   }
 
   setGoal(-8,6);
+=======
+			
+	}
+  else{
+    		ROS_INFO("The base failed to move to goal for some reason.");
+			
+  }
+   
+  setGoal(4,-4);
 
   ROS_INFO("Sending goal");
   ac.sendGoal(goal,&serviceDone,&serviceActivated,&serviceFeedback);
 	ac.waitForResult();
 	if(ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED){
    			ROS_INFO("The base moved to goal!");
+			
+	}
+  else{
+    		ROS_INFO("The base failed to move to goal for some reason.");
+		
+  }
+  
+  setGoal(-4,-4);
+
+  ROS_INFO("Sending goal");
+  ac.sendGoal(goal,&serviceDone,&serviceActivated,&serviceFeedback);
+	ac.waitForResult();
+	if(ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED){
+   			ROS_INFO("The base moved to goal!");
+			
+	}
+  else{
+    		ROS_INFO("The base failed to move to goal for some reason.");
+			
+  }
+
+	setGoal(-8,-4);
+>>>>>>> 0b19359d06cf7f7e4e82d0db01ab0b8b0f78368c
+
+  ROS_INFO("Sending goal");
+  ac.sendGoal(goal,&serviceDone,&serviceActivated,&serviceFeedback);
+	ac.waitForResult();
+	if(ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED){
+   			ROS_INFO("The base moved to goal!");
+<<<<<<< HEAD
 			  turn(11, 1, 1);
 	}
   else{
@@ -197,12 +360,23 @@ int main(int argc, char** argv){
   }
 
   setGoal(-8,8);
+=======
+			
+	}
+  else{
+    		ROS_INFO("The base failed to move to goal for some reason.");
+			
+  }
+
+  setGoal(-8,-8);
+>>>>>>> 0b19359d06cf7f7e4e82d0db01ab0b8b0f78368c
 
   ROS_INFO("Sending goal");
   ac.sendGoal(goal,&serviceDone,&serviceActivated,&serviceFeedback);
 	ac.waitForResult();
 	if(ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED){
    			ROS_INFO("The base moved to goal!");
+<<<<<<< HEAD
 			  turn(11, 1, 1);
 	}
   else{
@@ -211,12 +385,36 @@ int main(int argc, char** argv){
   }
   
   setGoal(-2,8);
+=======
+			
+	}
+  else{
+    		ROS_INFO("The base failed to move to goal for some reason.");
+			
+  }
+	setGoal(-4,-8);
 
   ROS_INFO("Sending goal");
   ac.sendGoal(goal,&serviceDone,&serviceActivated,&serviceFeedback);
 	ac.waitForResult();
 	if(ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED){
    			ROS_INFO("The base moved to goal!");
+			
+	}
+  else{
+    		ROS_INFO("The base failed to move to goal for some reason.");
+			
+  }
+
+  setGoal(4,-8);
+>>>>>>> 0b19359d06cf7f7e4e82d0db01ab0b8b0f78368c
+
+  ROS_INFO("Sending goal");
+  ac.sendGoal(goal,&serviceDone,&serviceActivated,&serviceFeedback);
+	ac.waitForResult();
+	if(ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED){
+   			ROS_INFO("The base moved to goal!");
+<<<<<<< HEAD
 			  turn(11, 1, 1);
 	}
   else{
@@ -224,6 +422,31 @@ int main(int argc, char** argv){
 			  turn(11, 1, 1);
   }
 
+=======
+			
+	}
+  else{
+    		ROS_INFO("The base failed to move to goal for some reason.");
+			
+  }
+
+	setGoal(8,-8);
+
+  ROS_INFO("Sending goal");
+  ac.sendGoal(goal,&serviceDone,&serviceActivated,&serviceFeedback);
+	ac.waitForResult();
+	if(ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED){
+   			ROS_INFO("The base moved to goal!");
+			
+	}
+  else{
+    		ROS_INFO("The base failed to move to goal for some reason.");
+			
+  }
+
+
+	
+>>>>>>> 0b19359d06cf7f7e4e82d0db01ab0b8b0f78368c
   return 0;
 }
 
@@ -237,6 +460,7 @@ void setGoal(double x, double y){
   goal.target_pose.pose.orientation.w = 1;
 }
 
+<<<<<<< HEAD
 void turn(double rel_angle, double ang_speed, bool isClockwise){
     ROS_INFO("Scanning goal area....");
 	geometry_msgs::Twist twist;
@@ -260,6 +484,8 @@ void turn(double rel_angle, double ang_speed, bool isClockwise){
         vel.publish(twist);
 
 }
+=======
+>>>>>>> 0b19359d06cf7f7e4e82d0db01ab0b8b0f78368c
 
 void serviceActivated() {
     ROS_INFO_STREAM("Service received goal");

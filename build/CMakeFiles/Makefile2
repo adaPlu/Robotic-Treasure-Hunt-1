@@ -6417,16 +6417,16 @@ clean: logical_camera_plugin/CMakeFiles/actionlib_generate_messages_nodejs.dir/c
 # Directory level rules for directory scavenger_hunt
 
 # Convenience name for "all" pass in the directory.
-scavenger_hunt/all: scavenger_hunt/CMakeFiles/currentPos.dir/all
-scavenger_hunt/all: scavenger_hunt/CMakeFiles/treasurelocater.dir/all
 scavenger_hunt/all: scavenger_hunt/CMakeFiles/gototreasure.dir/all
+scavenger_hunt/all: scavenger_hunt/CMakeFiles/currentPos.dir/all
+scavenger_hunt/all: scavenger_hunt/CMakeFiles/treasurelocator.dir/all
 
 .PHONY : scavenger_hunt/all
 
 # Convenience name for "clean" pass in the directory.
-scavenger_hunt/clean: scavenger_hunt/CMakeFiles/currentPos.dir/clean
-scavenger_hunt/clean: scavenger_hunt/CMakeFiles/treasurelocater.dir/clean
 scavenger_hunt/clean: scavenger_hunt/CMakeFiles/gototreasure.dir/clean
+scavenger_hunt/clean: scavenger_hunt/CMakeFiles/currentPos.dir/clean
+scavenger_hunt/clean: scavenger_hunt/CMakeFiles/treasurelocator.dir/clean
 
 .PHONY : scavenger_hunt/clean
 
@@ -6434,6 +6434,43 @@ scavenger_hunt/clean: scavenger_hunt/CMakeFiles/gototreasure.dir/clean
 scavenger_hunt/preinstall:
 
 .PHONY : scavenger_hunt/preinstall
+
+#=============================================================================
+# Target rules for target scavenger_hunt/CMakeFiles/gototreasure.dir
+
+# All Build rule for target.
+scavenger_hunt/CMakeFiles/gototreasure.dir/all:
+	$(MAKE) -f scavenger_hunt/CMakeFiles/gototreasure.dir/build.make scavenger_hunt/CMakeFiles/gototreasure.dir/depend
+	$(MAKE) -f scavenger_hunt/CMakeFiles/gototreasure.dir/build.make scavenger_hunt/CMakeFiles/gototreasure.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/adam/wsfinal/build/CMakeFiles --progress-num=10,11 "Built target gototreasure"
+.PHONY : scavenger_hunt/CMakeFiles/gototreasure.dir/all
+
+# Include target in all.
+all: scavenger_hunt/CMakeFiles/gototreasure.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+scavenger_hunt/CMakeFiles/gototreasure.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/adam/wsfinal/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 scavenger_hunt/CMakeFiles/gototreasure.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/adam/wsfinal/build/CMakeFiles 0
+.PHONY : scavenger_hunt/CMakeFiles/gototreasure.dir/rule
+
+# Convenience name for target.
+gototreasure: scavenger_hunt/CMakeFiles/gototreasure.dir/rule
+
+.PHONY : gototreasure
+
+# clean rule for target.
+scavenger_hunt/CMakeFiles/gototreasure.dir/clean:
+	$(MAKE) -f scavenger_hunt/CMakeFiles/gototreasure.dir/build.make scavenger_hunt/CMakeFiles/gototreasure.dir/clean
+.PHONY : scavenger_hunt/CMakeFiles/gototreasure.dir/clean
+
+# clean rule for target.
+clean: scavenger_hunt/CMakeFiles/gototreasure.dir/clean
+
+.PHONY : clean
 
 #=============================================================================
 # Target rules for target scavenger_hunt/CMakeFiles/currentPos.dir
@@ -6473,76 +6510,39 @@ clean: scavenger_hunt/CMakeFiles/currentPos.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target scavenger_hunt/CMakeFiles/treasurelocater.dir
+# Target rules for target scavenger_hunt/CMakeFiles/treasurelocator.dir
 
 # All Build rule for target.
-scavenger_hunt/CMakeFiles/treasurelocater.dir/all:
-	$(MAKE) -f scavenger_hunt/CMakeFiles/treasurelocater.dir/build.make scavenger_hunt/CMakeFiles/treasurelocater.dir/depend
-	$(MAKE) -f scavenger_hunt/CMakeFiles/treasurelocater.dir/build.make scavenger_hunt/CMakeFiles/treasurelocater.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/adam/wsfinal/build/CMakeFiles --progress-num=47,48 "Built target treasurelocater"
-.PHONY : scavenger_hunt/CMakeFiles/treasurelocater.dir/all
+scavenger_hunt/CMakeFiles/treasurelocator.dir/all:
+	$(MAKE) -f scavenger_hunt/CMakeFiles/treasurelocator.dir/build.make scavenger_hunt/CMakeFiles/treasurelocator.dir/depend
+	$(MAKE) -f scavenger_hunt/CMakeFiles/treasurelocator.dir/build.make scavenger_hunt/CMakeFiles/treasurelocator.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/adam/wsfinal/build/CMakeFiles --progress-num=47,48 "Built target treasurelocator"
+.PHONY : scavenger_hunt/CMakeFiles/treasurelocator.dir/all
 
 # Include target in all.
-all: scavenger_hunt/CMakeFiles/treasurelocater.dir/all
+all: scavenger_hunt/CMakeFiles/treasurelocator.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-scavenger_hunt/CMakeFiles/treasurelocater.dir/rule: cmake_check_build_system
+scavenger_hunt/CMakeFiles/treasurelocator.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/adam/wsfinal/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 scavenger_hunt/CMakeFiles/treasurelocater.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 scavenger_hunt/CMakeFiles/treasurelocator.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/adam/wsfinal/build/CMakeFiles 0
-.PHONY : scavenger_hunt/CMakeFiles/treasurelocater.dir/rule
+.PHONY : scavenger_hunt/CMakeFiles/treasurelocator.dir/rule
 
 # Convenience name for target.
-treasurelocater: scavenger_hunt/CMakeFiles/treasurelocater.dir/rule
+treasurelocator: scavenger_hunt/CMakeFiles/treasurelocator.dir/rule
 
-.PHONY : treasurelocater
-
-# clean rule for target.
-scavenger_hunt/CMakeFiles/treasurelocater.dir/clean:
-	$(MAKE) -f scavenger_hunt/CMakeFiles/treasurelocater.dir/build.make scavenger_hunt/CMakeFiles/treasurelocater.dir/clean
-.PHONY : scavenger_hunt/CMakeFiles/treasurelocater.dir/clean
+.PHONY : treasurelocator
 
 # clean rule for target.
-clean: scavenger_hunt/CMakeFiles/treasurelocater.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target scavenger_hunt/CMakeFiles/gototreasure.dir
-
-# All Build rule for target.
-scavenger_hunt/CMakeFiles/gototreasure.dir/all:
-	$(MAKE) -f scavenger_hunt/CMakeFiles/gototreasure.dir/build.make scavenger_hunt/CMakeFiles/gototreasure.dir/depend
-	$(MAKE) -f scavenger_hunt/CMakeFiles/gototreasure.dir/build.make scavenger_hunt/CMakeFiles/gototreasure.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/adam/wsfinal/build/CMakeFiles --progress-num=10,11 "Built target gototreasure"
-.PHONY : scavenger_hunt/CMakeFiles/gototreasure.dir/all
-
-# Include target in all.
-all: scavenger_hunt/CMakeFiles/gototreasure.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-scavenger_hunt/CMakeFiles/gototreasure.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/adam/wsfinal/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 scavenger_hunt/CMakeFiles/gototreasure.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/adam/wsfinal/build/CMakeFiles 0
-.PHONY : scavenger_hunt/CMakeFiles/gototreasure.dir/rule
-
-# Convenience name for target.
-gototreasure: scavenger_hunt/CMakeFiles/gototreasure.dir/rule
-
-.PHONY : gototreasure
+scavenger_hunt/CMakeFiles/treasurelocator.dir/clean:
+	$(MAKE) -f scavenger_hunt/CMakeFiles/treasurelocator.dir/build.make scavenger_hunt/CMakeFiles/treasurelocator.dir/clean
+.PHONY : scavenger_hunt/CMakeFiles/treasurelocator.dir/clean
 
 # clean rule for target.
-scavenger_hunt/CMakeFiles/gototreasure.dir/clean:
-	$(MAKE) -f scavenger_hunt/CMakeFiles/gototreasure.dir/build.make scavenger_hunt/CMakeFiles/gototreasure.dir/clean
-.PHONY : scavenger_hunt/CMakeFiles/gototreasure.dir/clean
-
-# clean rule for target.
-clean: scavenger_hunt/CMakeFiles/gototreasure.dir/clean
+clean: scavenger_hunt/CMakeFiles/treasurelocator.dir/clean
 
 .PHONY : clean
 
