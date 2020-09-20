@@ -1,6 +1,6 @@
 # Robotic-Treasure-Hunt
 A Robotic Treasure Hunt Designed for UC Merced CSE 180.
-Progams written and designed by Adam Pluguez and Irian Aguiluz
+Progams written and designed by Ada Pluguez and Irian Aguiluz
 Due to the project being setup on each machine local text files in the build folder of the workspace need to be overwritten or have locations changed for the workspace to compile.
 
 Problem description
